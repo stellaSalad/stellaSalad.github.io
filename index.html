@@ -14,6 +14,8 @@
 
 
 <link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-minimal.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
@@ -120,6 +122,11 @@
     <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a>
 
   </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a>
+
+  </li>
         <li class="menu-item menu-item-categories">
 
     <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a>
@@ -128,11 +135,6 @@
         <li class="menu-item menu-item-archives">
 
     <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
-
-  </li>
-        <li class="menu-item menu-item-resources">
-
-    <a href="/resources/" rel="section"><i class="download fa-fw"></i>resources</a>
 
   </li>
   </ul>
@@ -185,10 +187,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
-              
 
-              <time title="Created: 2024-01-23 17:49:09 / Modified: 22:05:40" itemprop="dateCreated datePublished" datetime="2024-01-23T17:49:09+08:00">2024-01-23</time>
+              <time title="Created: 2024-01-23 17:49:09" itemprop="dateCreated datePublished" datetime="2024-01-23T17:49:09+08:00">2024-01-23</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2024-01-24 20:58:03" itemprop="dateModified" datetime="2024-01-24T20:58:03+08:00">2024-01-24</time>
+              </span>
 
           
 
@@ -202,10 +210,14 @@
 
       
           <h1 id="Welcome-to-iEnglish-Channel"><a href="#Welcome-to-iEnglish-Channel" class="headerlink" title="Welcome to iEnglish Channel"></a>Welcome to iEnglish Channel</h1><p>大家好，欢迎来到iEnglish频道，在这个，我们将一起学习更多的英文文章，积累更多的词汇，聊聊一些有趣的东西。当然了，主要目的还是提高自己的英语能力。</p>
-<p>我们会以主题为框架，在语境当中学习新的知识，我们不要求大家刻意去背诵，而是采用一种习得的方式来掌握另一门语言，所以，所有的阅读材料都会按难度进行分级，简单为1，困难为5。他们之间的关系也不是完全割裂的，而是递进关系，所以我们建议大家按照自己的能力来学习。同时，搭建网站不易，如果大家发现一些问题，或者有更好的建议，都可以在评论区留言，也谢谢大家的宽容和包涵。目前留言板的功能还没有成功部署，但我想应该快了。</p>
-<p>希望大家在这里玩得开心，目前版本无法提供交互，等我再修炼修炼，应该会推出一个app版本，估计那个时候，你们的娃都很大了……</p>
-<p><code>print(&quot;Hello, iEnglish Channel&quot;)</code></p>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2024/01/23/Welcome-to-this-website/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -250,6 +262,13 @@
 
               <time title="Created: 2024-01-21 20:43:39" itemprop="dateCreated datePublished" datetime="2024-01-21T20:43:39+08:00">2024-01-21</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2024-01-24 20:58:23" itemprop="dateModified" datetime="2024-01-24T20:58:23+08:00">2024-01-24</time>
+              </span>
 
           
 
@@ -263,19 +282,14 @@
 
       
           <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2024/01/21/hello-world/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -364,6 +378,11 @@
       </div>
   </nav>
 </div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="/stellaforstars@163.com" title="E-Mail → stellaforstars@163.com"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
 
 
 
