@@ -19,15 +19,15 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Mist","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Mist","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="Learn English step by step">
+  <meta name="description" content="Learn it step by step">
 <meta property="og:type" content="website">
-<meta property="og:title" content="My Blog">
+<meta property="og:title" content="iEnglish">
 <meta property="og:url" content="http://example.com/index.html">
-<meta property="og:site_name" content="My Blog">
-<meta property="og:description" content="Learn English step by step">
+<meta property="og:site_name" content="iEnglish">
+<meta property="og:description" content="Learn it step by step">
 <meta property="og:locale" content="en_US">
 <meta property="article:author" content="Stella">
 <meta name="twitter:card" content="summary">
@@ -45,7 +45,7 @@
   };
 </script>
 
-  <title>My Blog</title>
+  <title>iEnglish</title>
   
 
 
@@ -96,13 +96,14 @@
 
     <a href="/" class="brand" rel="start">
       <span class="logo-line-before"><i></i></span>
-      <h1 class="site-title">My Blog</h1>
+      <h1 class="site-title">iEnglish</h1>
       <span class="logo-line-after"><i></i></span>
     </a>
   </div>
 
   <div class="site-nav-right">
     <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
     </div>
   </div>
 </div>
@@ -117,9 +118,9 @@
     <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
 
   </li>
-        <li class="menu-item menu-item-about">
+        <li class="menu-item menu-item-categories">
 
-    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a>
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a>
 
   </li>
         <li class="menu-item menu-item-tags">
@@ -127,21 +128,48 @@
     <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a>
 
   </li>
-        <li class="menu-item menu-item-categories">
-
-    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a>
-
-  </li>
         <li class="menu-item menu-item-archives">
 
     <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
 
   </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
   </ul>
 </nav>
 
 
 
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
 
 </div>
     </header>
@@ -164,21 +192,21 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2024/01/23/Welcome-to-this-website/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/01/25/Science/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
       <meta itemprop="name" content="Stella">
-      <meta itemprop="description" content="Learn English step by step">
+      <meta itemprop="description" content="Learn it step by step">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="My Blog">
+      <meta itemprop="name" content="iEnglish">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2024/01/23/Welcome-to-this-website/" class="post-title-link" itemprop="url">Welcome to this website</a>
+            <a href="/2024/01/25/Science/" class="post-title-link" itemprop="url">Science</a>
         </h2>
 
         <div class="post-meta">
@@ -187,16 +215,19 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
+              
 
-              <time title="Created: 2024-01-23 17:49:09" itemprop="dateCreated datePublished" datetime="2024-01-23T17:49:09+08:00">2024-01-23</time>
+              <time title="Created: 2024-01-25 17:10:35 / Modified: 17:20:02" itemprop="dateCreated datePublished" datetime="2024-01-25T17:10:35+08:00">2024-01-25</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2024-01-24 20:58:03" itemprop="dateModified" datetime="2024-01-24T20:58:03+08:00">2024-01-24</time>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
               </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Computer/" itemprop="url" rel="index"><span itemprop="name">Computer</span></a>
+                </span>
+            </span>
 
           <br>
             <span class="post-meta-item" title="Symbols count in article">
@@ -204,7 +235,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">Symbols count in article: </span>
-              <span>404</span>
+              <span>50</span>
             </span>
             <span class="post-meta-item" title="Reading time">
               <span class="post-meta-item-icon">
@@ -223,15 +254,9 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="Welcome-to-iEnglish-Channel"><a href="#Welcome-to-iEnglish-Channel" class="headerlink" title="Welcome to iEnglish Channel"></a>Welcome to iEnglish Channel</h1><p>大家好，欢迎来到iEnglish频道，在这个，我们将一起学习更多的英文文章，积累更多的词汇，聊聊一些有趣的东西。当然了，主要目的还是提高自己的英语能力。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2024/01/23/Welcome-to-this-website/#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
+          <h1 id="Hello-World"><a href="#Hello-World" class="headerlink" title="Hello World!"></a>Hello World!</h1><p>Today I want to introduce a new product for you.</p>
+<p><img src="/2024/01/25/Science/food.png"></p>
+
       
     </div>
 
@@ -250,21 +275,21 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2024/01/21/hello-world/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/01/25/My-school-day/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
       <meta itemprop="name" content="Stella">
-      <meta itemprop="description" content="Learn English step by step">
+      <meta itemprop="description" content="Learn it step by step">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="My Blog">
+      <meta itemprop="name" content="iEnglish">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2024/01/21/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
+            <a href="/2024/01/25/My-school-day/" class="post-title-link" itemprop="url">My school day</a>
         </h2>
 
         <div class="post-meta">
@@ -273,16 +298,19 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
+              
 
-              <time title="Created: 2024-01-21 20:43:39" itemprop="dateCreated datePublished" datetime="2024-01-21T20:43:39+08:00">2024-01-21</time>
+              <time title="Created: 2024-01-25 15:43:54 / Modified: 17:16:08" itemprop="dateCreated datePublished" datetime="2024-01-25T15:43:54+08:00">2024-01-25</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2024-01-24 20:58:23" itemprop="dateModified" datetime="2024-01-24T20:58:23+08:00">2024-01-24</time>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
               </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/School-Life/" itemprop="url" rel="index"><span itemprop="name">School Life</span></a>
+                </span>
+            </span>
 
           <br>
             <span class="post-meta-item" title="Symbols count in article">
@@ -290,7 +318,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">Symbols count in article: </span>
-              <span>367</span>
+              <span>197</span>
             </span>
             <span class="post-meta-item" title="Reading time">
               <span class="post-meta-item-icon">
@@ -309,10 +337,91 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+          <h1 id="My-school-day"><a href="#My-school-day" class="headerlink" title="My school day"></a>My school day</h1><p>Hi! I am Alex Greenall. I am thirteen and I go to Park School in Oxford, England. I go to school on weekdays, but not on Saturday and Sunday. This is my school day. I get up at half past seven in the morning, and then have breakfast. </p>
+<p><img src="/2024/01/25/My-school-day/haha.png"></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/01/23/Welcome-to-this-website/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="Stella">
+      <meta itemprop="description" content="Learn it step by step">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="iEnglish">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2024/01/23/Welcome-to-this-website/" class="post-title-link" itemprop="url">Welcome to iEnglish</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2024-01-23 17:49:09" itemprop="dateCreated datePublished" datetime="2024-01-23T17:49:09+08:00">2024-01-23</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2024-01-25 15:16:30" itemprop="dateModified" datetime="2024-01-25T15:16:30+08:00">2024-01-25</time>
+              </span>
+
+          <br>
+            <span class="post-meta-item" title="Symbols count in article">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">Symbols count in article: </span>
+              <span>394</span>
+            </span>
+            <span class="post-meta-item" title="Reading time">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">Reading time &asymp;</span>
+              <span>1 mins.</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="Welcome-to-iEnglish-Channel"><a href="#Welcome-to-iEnglish-Channel" class="headerlink" title="Welcome to iEnglish Channel"></a>Welcome to iEnglish Channel</h1><p>大家好，欢迎来到iEnglish频道，看到这个全英的界面，不知道大家是什么感受？没关系，你会对这些单词越来越熟悉。</p>
+<p>在这里，我们会一起学习一些的英文文章，积累词汇，我们也会聊聊一些有趣的东西。当然了，我们的主要目的还是提高自身的英语能力。</p>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/2024/01/21/hello-world/#more" rel="contents">
+              <a class="btn" href="/2024/01/23/Welcome-to-this-website/#more" rel="contents">
                 Read more &raquo;
               </a>
             </div>
@@ -393,22 +502,34 @@
     <img class="site-author-image" itemprop="image" alt="Stella"
       src="/images/avatar.jpg">
   <p class="site-author-name" itemprop="name">Stella</p>
-  <div class="site-description" itemprop="description">Learn English step by step</div>
+  <div class="site-description" itemprop="description">Learn it step by step</div>
 </div>
 <div class="site-state-wrap motion-element">
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">2</span>
+          <span class="site-state-item-count">3</span>
           <span class="site-state-item-name">posts</span>
         </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
 </div>
   <div class="links-of-author motion-element">
       <span class="links-of-author-item">
-        <a href="/stellaforstars@163.com" title="E-Mail → stellaforstars@163.com"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+        <a href="mailto:stellaforstars@163.com" title="E-Mail → mailto:stellaforstars@163.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
       </span>
   </div>
 
@@ -453,6 +574,26 @@
   </div>
 
         
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="Total Visitors">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="Total Views">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
 
 
 
@@ -486,6 +627,10 @@
   
 
 
+
+
+  
+<script src="/js/local-search.js"></script>
 
 
 
