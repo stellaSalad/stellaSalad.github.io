@@ -1,27 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Science</title>
-    <url>/2024/01/25/Science/</url>
-    <content><![CDATA[<h1 id="Hello-World"><a href="#Hello-World" class="headerlink" title="Hello World!"></a>Hello World!</h1><p>Today I want to introduce a new product for you.</p>
-<p><img src="/2024/01/25/Science/food.png"></p>
-]]></content>
-      <categories>
-        <category>Computer</category>
-      </categories>
-      <tags>
-        <tag>medium</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>My school day</title>
     <url>/2024/01/25/My-school-day/</url>
-    <content><![CDATA[<h1 id="My-school-day"><a href="#My-school-day" class="headerlink" title="My school day"></a>My school day</h1><p>Hi! I am Alex Greenall. I am thirteen and I go to Park School in Oxford, England. I go to school on weekdays, but not on Saturday and Sunday. This is my school day. I get up at half past seven in the morning, and then have breakfast. </p>
-<p><img src="/2024/01/25/My-school-day/haha.png"></p>
+    <content><![CDATA[<h1 id="My-school-day"><a href="#My-school-day" class="headerlink" title="My school day"></a>My school day</h1><h3 id="This-is-my-friend-Alex-Greenall-He-wants-to-share-his-school-day-with-you"><a href="#This-is-my-friend-Alex-Greenall-He-wants-to-share-his-school-day-with-you" class="headerlink" title="This is my friend Alex, Greenall. He wants to share his school day with you."></a>This is my friend Alex, Greenall. He wants to share his school day with you.</h3><blockquote>
+<p>Hi! I‘m Alex Greenall. I’m thirteen and I go to Park School in Oxford, England. I go to school on weekdays, but not on Saturday and Sunday. This is my school day. I get up at half past seven in the morning, and then have breakfast. </p>
+<p>My school is next to my house. I go to school at half past eight and see my friends. We start work at nine o’clock. We have three lessons in the morning. My favourite subject is art.</p>
+<p>At eleven o’clock, we have a break in the playground and I talk to my friends. They go to the playground and play football, but I don’t like football. </p>
+<span id="more"></span>
+
+<p>We have lunch in the dining hall at half past twelve. I like school lunch! We have meat and rice with vegetables, or hamburgers. I drink juice or water. </p>
+<p>We start lessons in the afternoon at half past one. We have two lessons in the afternoon. Then we go home at half past three. </p>
+<p>In the evening, I watch TV and have dinner with my family. I do my homework and go to bed at ten o’clock. </p>
+</blockquote>
+<h3 id="Reading-Comprehension"><a href="#Reading-Comprehension" class="headerlink" title="Reading Comprehension"></a>Reading Comprehension</h3><h3 id="I-What-are-these-activities-Find-them-from-the-article"><a href="#I-What-are-these-activities-Find-them-from-the-article" class="headerlink" title="I. What are these activities? Find them from the article."></a>I. What are these activities? Find them from the article.</h3><blockquote>
+<p> <img src="/2024/01/25/My-school-day/My-school-day/image1.png"></p>
+</blockquote>
+<h3 id="II-Complete-Alex’s-timetable"><a href="#II-Complete-Alex’s-timetable" class="headerlink" title="II. Complete Alex’s timetable."></a>II. Complete Alex’s timetable.</h3><table>
+<thead>
+<tr>
+<th align="center">Time</th>
+<th align="center">Activities</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">7:30 a.m.</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">8:30 a.m.</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">9:00 a.m.</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">10:00 a.m.</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">11:00 a.m.</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">12:30 p.m.</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">3:30 p.m.</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">10:00 p.m.</td>
+<td align="center"></td>
+</tr>
+</tbody></table>
+<h3 id="III-Answer-the-following-questions-in-complete-sentence"><a href="#III-Answer-the-following-questions-in-complete-sentence" class="headerlink" title="III. Answer the following questions in complete sentence."></a>III. Answer the following questions in complete sentence.</h3><ol>
+<li>How old is Alex?</li>
+<li>When does Alex get up in the morning?</li>
+<li>How many lessons do they have in the morning?</li>
+<li>What do they eat for lunch?</li>
+<li>What time do they go home?</li>
+</ol>
+<h3 id="IV-Complete-the-passage-below"><a href="#IV-Complete-the-passage-below" class="headerlink" title="IV. Complete the passage below."></a>IV. Complete the passage below.</h3><h3 id><a href="#" class="headerlink" title></a></h3><p>What order does the writer use? </p>
+<p>A. space order                 B. time order</p>
 ]]></content>
       <categories>
         <category>School Life</category>
       </categories>
+      <tags>
+        <tag>easy</tag>
+      </tags>
   </entry>
   <entry>
     <title>Welcome to iEnglish</title>
@@ -33,5 +83,18 @@
 <p>同时，网站搭建不易，如果大家发现了一些问题，或者有更好的建议，可以私信我，或者在评论区留言，谢谢大家的宽容和包涵。目前留言板的功能还没有成功部署，但我想应该快了。</p>
 <p>希望大家在这里玩得开心，目前版本无法提供交互，等我再修炼修炼，但估计那个时候，你们的娃都很大了吧……</p>
 ]]></content>
+  </entry>
+  <entry>
+    <title>Science</title>
+    <url>/2024/01/25/Science/</url>
+    <content><![CDATA[<h1 id="Hello-World"><a href="#Hello-World" class="headerlink" title="Hello World!"></a>Hello World!</h1><p>Today I want to introduce a new product for you.</p>
+<p><img src="/2024/01/25/Science/food.png"></p>
+]]></content>
+      <categories>
+        <category>Computer</category>
+      </categories>
+      <tags>
+        <tag>medium</tag>
+      </tags>
   </entry>
 </search>
