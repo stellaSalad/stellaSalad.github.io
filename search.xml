@@ -3,12 +3,33 @@
   <entry>
     <title>My school day</title>
     <url>/2024/01/25/My-school-day/</url>
-    <content><![CDATA[<h3 id="📖My-school-day"><a href="#📖My-school-day" class="headerlink" title="📖My school day"></a>📖<strong>My school day</strong></h3><p>This is my friend Alex, Greenall. He wants to share his school day with you.</p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h3 id="📖My-school-day"><a href="#📖My-school-day" class="headerlink" title="📖My school day"></a>📖<strong>My school day</strong></h3><p>This is my friend Alex, Greenall. He wants to share his school day with you.</p>
 <p><img src="/2024/01/25/My-school-day/haha.png"></p>
 <span id="more"></span>
 
 <hr>
-<p>​       </p>
+
+        <div id="aplayer-rdqVEoxa" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+            <pre class="aplayer-lrc-content"></pre>
+        </div>
+        <script>
+          var ap = new APlayer({
+            element: document.getElementById("aplayer-rdqVEoxa"),
+            narrow: false,
+            autoplay: false,
+            showlrc: false,
+            music: {
+              title: "My school day",
+              author: "Alex Greenall",
+              url: "reading.mp3",
+              pic: "/2024/01/25/My-school-day/haha.png",
+              lrc: ""
+            }
+          });
+          window.aplayers || (window.aplayers = []);
+          window.aplayers.push(ap);
+        </script>
+
 <p>👋Hi! I’m Alex Greenall. I’m thirteen and I go to Park School in Oxford, England. I go to school <font color="YellowGreen"><strong>on weekdays</strong></font>, but not on Saturday and Sunday. This is my school day. I <font color="YellowGreen"><strong>get up</strong></font> at half past seven in the morning, and then have breakfast. </p>
 <p>My school <font color="YellowGreen"><strong>is next to</strong></font> my house. I go to school <font color="YellowGreen"><strong>at half past eight</strong></font> and see my friends. We start work at nine o’clock. We have three lessons in the morning. My favourite subject is art. </p>
 <p>At eleven o’clock, we <font color="YellowGreen"><strong>have a break</strong></font> in the playground and I <font color="YellowGreen"><strong>talk to</strong></font> my friends. They go to the playground and play football, but I don’t like football. </p>
@@ -121,9 +142,23 @@
       </tags>
   </entry>
   <entry>
+    <title>Welcome to iEnglish</title>
+    <url>/2024/01/23/Welcome-to-this-website/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="Welcome-to-iEnglish-Channel😊"><a href="#Welcome-to-iEnglish-Channel😊" class="headerlink" title="Welcome to iEnglish Channel😊"></a>Welcome to iEnglish Channel😊</h1><p>大家好，欢迎来到iEnglish频道，看到这个全英的界面，不知道大家是什么感受？没关系😁，你会对这些单词越来越熟悉🔥。</p>
+<p>在这里，我们会以阅读为主，一起学习一些英文文章，积累词汇，我们也会聊聊一些有趣的东西。当然了，我们的主要目的还是提高自身的英语能力💪。</p>
+<span id="more"></span>
+<p>我们会以主题为框架，在语境当中学习新的知识，大家可以在categories分类中📚查看不同的主题，在这里，我不会要求大家刻意去背诵，而是采用一种习得的方式来掌握另一门语言。但❗上学的时候，你们该背还是要背的，听写我还是会继续的。</p>
+<p>所有的阅读材料都会按难度进行分级，通过标签tag🏷️体现出来。我更建议大家按照自己的能力和兴趣来学习，这样会达到事半功倍的效果。但你们没得选😭，因为网站还在搭建中🏗️，只能是我发什么，你们看什么😇。</p>
+<p>瞅什么瞅👀，反对无效……</p>
+<p>同时，如果大家发现了一些问题，或者有更好的建议，可以私信我✉️，或者在评论区留言，谢谢大家的宽容和包涵。目前留言板的功能还没有成功部署📐，但我想应该快了。</p>
+<p>希望大家在这里玩得开心，目前版本无法提供交互，等我再修炼修炼吧……</p>
+<p>这么说，就是大概率没有的意思👻…….</p>
+]]></content>
+  </entry>
+  <entry>
     <title>Science</title>
     <url>/2024/01/25/Science/</url>
-    <content><![CDATA[<h1 id="Hello-World"><a href="#Hello-World" class="headerlink" title="Hello World!"></a>Hello World!</h1><p>Today I want to introduce a new product for you.</p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="Hello-World"><a href="#Hello-World" class="headerlink" title="Hello World!"></a>Hello World!</h1><p>Today I want to introduce a new product for you.</p>
 <p><img src="/2024/01/25/Science/food.png"></p>
 ]]></content>
       <categories>
@@ -132,19 +167,5 @@
       <tags>
         <tag>medium</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>Welcome to iEnglish</title>
-    <url>/2024/01/23/Welcome-to-this-website/</url>
-    <content><![CDATA[<h1 id="Welcome-to-iEnglish-Channel"><a href="#Welcome-to-iEnglish-Channel" class="headerlink" title="Welcome to iEnglish Channel"></a>Welcome to iEnglish Channel</h1><p>大家好，欢迎来到iEnglish频道，看到这个全英的界面，不知道大家是什么感受？没关系，你会对这些单词越来越熟悉。</p>
-<p>在这里，我们会一起学习一些的英文文章，积累词汇，我们也会聊聊一些有趣的东西。当然了，我们的主要目的还是提高自身的英语能力。</p>
-<span id="more"></span>
-<p>我们会以主题为框架，在语境当中学习新的知识，在这里，我不会要求大家刻意去背诵，而是采用一种习得的方式来掌握另一门语言。但！上学的时候，你们该背还是要背的，听写我还是会继续的。</p>
-<p>所有的阅读材料都会按难度进行分级，通过标签tag体现出来。我更建议大家按照自己的能力和兴趣来学习，这样会达到事半功倍的效果。但你们没得选，因为网站还在搭建中，只能是我发什么，你们看什么。</p>
-<p>瞅什么瞅，反对无效……</p>
-<p>同时，网站搭建不易，如果大家发现了一些问题，或者有更好的建议，可以私信我，或者在评论区留言，谢谢大家的宽容和包涵。目前留言板的功能还没有成功部署，但我想应该快了。</p>
-<p>希望大家在这里玩得开心，目前版本无法提供交互，等我再修炼修炼吧……</p>
-<p>这么说，就是大概率没有的意思…….</p>
-]]></content>
   </entry>
 </search>
