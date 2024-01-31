@@ -9,12 +9,12 @@
 
 <hr>
 
-        <div id="aplayer-DqlgtzaV" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+        <div id="aplayer-oGgbNAVD" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
             <pre class="aplayer-lrc-content"></pre>
         </div>
         <script>
           var ap = new APlayer({
-            element: document.getElementById("aplayer-DqlgtzaV"),
+            element: document.getElementById("aplayer-oGgbNAVD"),
             narrow: false,
             autoplay: false,
             showlrc: false,
@@ -289,13 +289,23 @@
   <entry>
     <title>Computer</title>
     <url>/2024/01/25/Science/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="🖥️Computer"><a href="#🖥️Computer" class="headerlink" title="🖥️Computer"></a>🖥️Computer</h1>
-        <div id="aplayer-tengvYst" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="🖥️Computer"><a href="#🖥️Computer" class="headerlink" title="🖥️Computer"></a>🖥️Computer</h1><p>如今，无论大家学习C，C++，java，python，还是其他高级编程语言，这将是你编写的第一个代码。“Hello, world!” 对我们人类简简单单，但对电脑而言，却经历了更加复杂的底层过程，毕竟机器只能认识0和1。所以，几乎所有的程序员，当第一次实现与计算机成功沟通之后，他们的肾上腺素就会急剧上升(激动不已)。今天的主题便是与电脑有关，我们一起来看看大家都用电脑干些什么吧！</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;Hello, World!\n&quot;</span>) </span><br></pre></td></tr></table></figure>
+
+
+
+<div align="center"><img src="/2024/01/25/Science/hello-world.png" width="40%" height="40%"></div>
+
+<span id="more"></span>
+
+<hr>
+
+        <div id="aplayer-iHpbZZCb" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
             <pre class="aplayer-lrc-content"></pre>
         </div>
         <script>
           var ap = new APlayer({
-            element: document.getElementById("aplayer-tengvYst"),
+            element: document.getElementById("aplayer-iHpbZZCb"),
             narrow: false,
             autoplay: false,
             showlrc: false,
@@ -326,7 +336,7 @@
         <category>Science</category>
       </categories>
       <tags>
-        <tag>medium</tag>
+        <tag>easy</tag>
       </tags>
   </entry>
 </search>
