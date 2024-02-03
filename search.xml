@@ -3,7 +3,7 @@
   <entry>
     <title>Computer</title>
     <url>/2024/01/25/Computer/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="🖥️Computer"><a href="#🖥️Computer" class="headerlink" title="🖥️Computer"></a>🖥️Computer</h1><p>如今，无论大家学习C，C++，java，python，还是其他高级编程语言，这将是你编写的第一个代码。“Hello, world!” 对我们人类简简单单，但对电脑而言，却经历了更加复杂的底层过程，毕竟机器只能认识0和1。所以，几乎所有的程序员，当第一次实现与计算机成功沟通之后，他们的肾上腺素就会急剧上升(激动不已)。今天的主题便是与电脑有关，我们一起来看看大家都用电脑干些什么吧！</p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="🖥️Hello-world"><a href="#🖥️Hello-world" class="headerlink" title="🖥️Hello, world!"></a>🖥️Hello, world!</h1><p>如今，无论大家学习C，C++，java，python，还是其他高级编程语言，这将是你编写的第一个代码。“Hello, world!” 对我们人类简简单单，但对电脑而言，却经历了更加复杂的底层过程，毕竟机器只能认识0和1。所以，几乎所有的程序员，当第一次实现与计算机成功沟通之后，他们的肾上腺素就会急剧上升(激动不已)。今天的主题便是与电脑有关，我们一起来看看大家都用电脑干些什么吧！</p>
 <figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;Hello, World!\n&quot;</span>) </span><br></pre></td></tr></table></figure>
 
 <style>.posts-expand .post-body img {
@@ -17,12 +17,12 @@
 
 <hr>
 
-        <div id="aplayer-XfDgMRbo" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+        <div id="aplayer-SsBMnejI" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
             <pre class="aplayer-lrc-content"></pre>
         </div>
         <script>
           var ap = new APlayer({
-            element: document.getElementById("aplayer-XfDgMRbo"),
+            element: document.getElementById("aplayer-SsBMnejI"),
             narrow: false,
             autoplay: false,
             showlrc: false,
@@ -49,7 +49,7 @@
 <p>We have a computer at home. My parents don’t use it. I can use it <strong><font color="DeBlue">on Sundays</font></strong>. I <strong><font color="DeBlue">send email to my friends</font></strong> and play computer games. But sometimes I play a lot of games and my mother doesn’t like it.</p>
 <div align="right">—— Mike</div>
 
-<p>​			</p>
+<hr>
 ]]></content>
       <categories>
         <category>Science</category>
@@ -67,12 +67,12 @@
 
 <hr>
 
-        <div id="aplayer-ssqBMTqd" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+        <div id="aplayer-wnrXgVzY" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
             <pre class="aplayer-lrc-content"></pre>
         </div>
         <script>
           var ap = new APlayer({
-            element: document.getElementById("aplayer-ssqBMTqd"),
+            element: document.getElementById("aplayer-wnrXgVzY"),
             narrow: false,
             autoplay: false,
             showlrc: false,
@@ -147,7 +147,7 @@
 <h4 id="IV-Complete-the-passage-below"><a href="#IV-Complete-the-passage-below" class="headerlink" title="IV. Complete the passage below."></a>IV. Complete the passage below.</h4><p>I’m Alex Greenall.  I ______ up at half past seven in the morning. I go to school at 8:30 and lessons ______ at nine o’clock. We have three lessons in the morning. I have a ______ at eleven o’clock. We have lunch in the dining hall at ______ past twelve. Lessons start in the afternoon at 1:30. We have two lessons in the afternoon. And I go ______ at half past three. In the evening, I do my homework and go to bed at ten o’clock. </p>
 <h4 id="V-Mind-Map"><a href="#V-Mind-Map" class="headerlink" title="V. Mind Map"></a>V. Mind Map</h4><p>Please retell the article according to the mind map.</p>
 <p>​      </p>
-<p><img src="/2024/01/25/My-school-day/image2.png"></p>
+<p><img src="/2024/01/25/My-school-day/image2.png">  </p>
 <p>​      </p>
 <p>​     </p>
 <hr>
@@ -244,6 +244,9 @@
 </blockquote>
 </li>
 <li><p>the dining hall，是餐厅的意思。hall有大厅的意思，所以这种dining hall就给人一种富丽堂皇的感觉，请看图。</p>
+<style>.posts-expand .post-body img {
+  margin-left: auto !important;
+}</style>
 <div align="center"><img src="/2024/01/25/My-school-day/dining_hall.jpg" width="50%" height="50%"></div>
 
 <p>关于餐厅，其实还有一些其他说法，比如canteen，cafeteria等。cafeteria是自助餐厅，顾客自己选择食物并将其放在托盘上，然后去收银台结账。canteen是指学校或办公室等地方，供应简单的食物和饮料，如汉堡、炸鸡、咖啡等。</p>
@@ -322,7 +325,7 @@
 <li>half</li>
 <li>home</li>
 </ol>
-]]></content>
+<h3 id="Download-the-passage"><a href="#Download-the-passage" class="headerlink" title="Download the passage"></a><a href="My-school-day.pdf"><font color="Orange">Download the passage</font></a></h3>]]></content>
       <categories>
         <category>School Life</category>
       </categories>
@@ -339,8 +342,11 @@
 <p>我们会以主题为框架，在语境当中学习新的知识，大家可以在categories分类中📚查看不同的主题，在这里，我不会要求大家刻意去背诵，而是采用一种习得的方式来掌握另一门语言。但❗上学的时候，你们该背还是要背的，听写也还是会继续的。</p>
 <p>所有的阅读材料都会按难度进行分级，通过标签tag🏷️体现出来。更建议大家按照自己的能力和兴趣来学习，这样会达到事半功倍的效果。但你们没得选😭，因为网站还在搭建中🏗️，只能是我发什么，你们看什么😇。</p>
 <p>瞅什么瞅👀，反对无效……</p>
-<p>同时，如果大家发现了一些问题，或者有更好的建议，可以私信我✉️，或者在评论区留言，谢谢大家的宽容和包涵。目前留言板的功能还没有部署📐，但我想应该快了。</p>
-<p>希望大家在这里玩得开心，目前版本无法提供交互，等我再修炼修炼吧……</p>
+<p>同时，如果大家发现了一些问题，或者有更好的建议，可以私信我✉️，或者在评论区留言，谢谢大家的宽容和包涵。目前留言板的功能已经部署📐，大家输入nick，也就是昵称，就可以进行评论。例如：昵称：沙拉酱，内容：温馨提示。</p>
+<p>大家在阅读过程中有任何问题，都可以在下面留言，但如果发现不良信息，请私信管理员Stella.</p>
+<p><img src="/2024/01/23/Welcome-to-this-website/comment.png"></p>
+<p>此外，我们还提供了整片文章的PDF供大家下载。</p>
+<p>祝大家在这里玩得开心，目前版本无法提供交互，等我再修炼修炼吧……</p>
 <p>这么说，就是大概率没有的意思👻…….</p>
 ]]></content>
   </entry>
