@@ -17,12 +17,12 @@
 
 <hr>
 
-        <div id="aplayer-cGeyjnuB" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+        <div id="aplayer-XfDgMRbo" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
             <pre class="aplayer-lrc-content"></pre>
         </div>
         <script>
           var ap = new APlayer({
-            element: document.getElementById("aplayer-cGeyjnuB"),
+            element: document.getElementById("aplayer-XfDgMRbo"),
             narrow: false,
             autoplay: false,
             showlrc: false,
@@ -67,12 +67,12 @@
 
 <hr>
 
-        <div id="aplayer-DmIuyHDs" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+        <div id="aplayer-ssqBMTqd" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
             <pre class="aplayer-lrc-content"></pre>
         </div>
         <script>
           var ap = new APlayer({
-            element: document.getElementById("aplayer-DmIuyHDs"),
+            element: document.getElementById("aplayer-ssqBMTqd"),
             narrow: false,
             autoplay: false,
             showlrc: false,
