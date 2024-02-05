@@ -26,12 +26,12 @@
 </tbody></table>
 <hr>
 <h3 id="Words-and-expressions"><a href="#Words-and-expressions" class="headerlink" title="Words and expressions"></a>Words and expressions</h3>
-        <div id="aplayer-LmZIOlJk" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+        <div id="aplayer-tKvUUqUc" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
             <pre class="aplayer-lrc-content"></pre>
         </div>
         <script>
           var ap = new APlayer({
-            element: document.getElementById("aplayer-LmZIOlJk"),
+            element: document.getElementById("aplayer-tKvUUqUc"),
             narrow: false,
             autoplay: false,
             showlrc: false,
@@ -116,12 +116,12 @@
 </tr>
 </tbody></table>
 <h3 id="While-listening"><a href="#While-listening" class="headerlink" title="While-listening"></a>While-listening</h3><h4 id="Activity-1-——-Before-going-to-the-zoo"><a href="#Activity-1-——-Before-going-to-the-zoo" class="headerlink" title="Activity 1 —— Before going to the zoo."></a>Activity 1 —— Before going to the zoo.</h4>
-        <div id="aplayer-yHwbTdnL" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+        <div id="aplayer-YMKuJzGc" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
             <pre class="aplayer-lrc-content"></pre>
         </div>
         <script>
           var ap = new APlayer({
-            element: document.getElementById("aplayer-yHwbTdnL"),
+            element: document.getElementById("aplayer-YMKuJzGc"),
             narrow: false,
             autoplay: false,
             showlrc: false,
@@ -145,12 +145,12 @@
 </li>
 </ul>
 <h4 id="Activity-2-——-A-trip-to-the-zoo"><a href="#Activity-2-——-A-trip-to-the-zoo" class="headerlink" title="Activity 2 —— A trip to the zoo"></a>Activity 2 —— A trip to the zoo</h4>
-        <div id="aplayer-BeXhBIDO" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+        <div id="aplayer-PPTMGAgA" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
             <pre class="aplayer-lrc-content"></pre>
         </div>
         <script>
           var ap = new APlayer({
-            element: document.getElementById("aplayer-BeXhBIDO"),
+            element: document.getElementById("aplayer-PPTMGAgA"),
             narrow: false,
             autoplay: false,
             showlrc: false,
@@ -222,7 +222,7 @@
 <h3 id="Post-listening"><a href="#Post-listening" class="headerlink" title="Post-listening"></a>Post-listening</h3><p>Work in pairs. Ask and answer.</p>
 <p>A: What’s your favorite animal? Does it eat plants?<br>B: Yes, it does.<br>A: Does it come from China?<br>B: Is it the panda?</p>
 <p>…</p>
-<h1 id="Keys"><a href="#Keys" class="headerlink" title="Keys"></a>Keys</h1><p><strong>Activity 1</strong></p>
+<h3 id="Keys"><a href="#Keys" class="headerlink" title="Keys"></a>Keys</h3><p><strong>Activity 1</strong></p>
 <p>Tony: Do you like pandas, Lingling?<br>Lingling: I love pandas. They are my favorite animals. What about you? Which animals do you like?<br>Tony: My favorite animals are monkeys and giraffes.<br>Lingling: Okay! Let’s go to the zoo and see them!<br>Tony: Sure! Let’s go!</p>
 <p><strong>Activity 2</strong></p>
 <ol>
@@ -286,12 +286,12 @@
 
 <hr>
 
-        <div id="aplayer-NeeUZNdc" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+        <div id="aplayer-xNPTDMKz" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
             <pre class="aplayer-lrc-content"></pre>
         </div>
         <script>
           var ap = new APlayer({
-            element: document.getElementById("aplayer-NeeUZNdc"),
+            element: document.getElementById("aplayer-xNPTDMKz"),
             narrow: false,
             autoplay: false,
             showlrc: false,
@@ -336,12 +336,12 @@
 
 <hr>
 
-        <div id="aplayer-OjjzVNho" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+        <div id="aplayer-ipBvpmAp" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
             <pre class="aplayer-lrc-content"></pre>
         </div>
         <script>
           var ap = new APlayer({
-            element: document.getElementById("aplayer-OjjzVNho"),
+            element: document.getElementById("aplayer-ipBvpmAp"),
             narrow: false,
             autoplay: false,
             showlrc: false,
