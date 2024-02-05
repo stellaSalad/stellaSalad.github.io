@@ -26,19 +26,19 @@
 </tbody></table>
 <hr>
 <h3 id="Words-and-expressions"><a href="#Words-and-expressions" class="headerlink" title="Words and expressions"></a>Words and expressions</h3>
-        <div id="aplayer-BvqvhIxD" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+        <div id="aplayer-eXVIOMcy" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
             <pre class="aplayer-lrc-content"></pre>
         </div>
         <script>
           var ap = new APlayer({
-            element: document.getElementById("aplayer-BvqvhIxD"),
+            element: document.getElementById("aplayer-eXVIOMcy"),
             narrow: false,
             autoplay: false,
             showlrc: false,
             music: {
               title: "Words and Expressions",
               author: "Tony and Lingling",
-              url: "listening-words.mp3",
+              url: "wordslistening.mp3",
               pic: "/2024/02/04/A-trip-to-the-zoo/dear.jpg",
               lrc: ""
             }
@@ -116,12 +116,12 @@
 </tr>
 </tbody></table>
 <h3 id="While-listening"><a href="#While-listening" class="headerlink" title="While-listening"></a>While-listening</h3><h4 id="Activity-1-——-Before-going-to-the-zoo"><a href="#Activity-1-——-Before-going-to-the-zoo" class="headerlink" title="Activity 1 —— Before going to the zoo."></a>Activity 1 —— Before going to the zoo.</h4>
-        <div id="aplayer-RqvqZiwF" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+        <div id="aplayer-rcEcLimv" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
             <pre class="aplayer-lrc-content"></pre>
         </div>
         <script>
           var ap = new APlayer({
-            element: document.getElementById("aplayer-RqvqZiwF"),
+            element: document.getElementById("aplayer-rcEcLimv"),
             narrow: false,
             autoplay: false,
             showlrc: false,
@@ -145,12 +145,12 @@
 </li>
 </ul>
 <h4 id="Activity-2-——-A-trip-to-the-zoo"><a href="#Activity-2-——-A-trip-to-the-zoo" class="headerlink" title="Activity 2 —— A trip to the zoo"></a>Activity 2 —— A trip to the zoo</h4>
-        <div id="aplayer-HsBfQxRK" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+        <div id="aplayer-joRJRVBo" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
             <pre class="aplayer-lrc-content"></pre>
         </div>
         <script>
           var ap = new APlayer({
-            element: document.getElementById("aplayer-HsBfQxRK"),
+            element: document.getElementById("aplayer-joRJRVBo"),
             narrow: false,
             autoplay: false,
             showlrc: false,
@@ -270,64 +270,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Computer</title>
-    <url>/2024/01/25/Computer/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="🖥️Hello-world"><a href="#🖥️Hello-world" class="headerlink" title="🖥️Hello, world!"></a>🖥️Hello, world!</h1><p>如今，无论大家学习C，C++，java，python，还是其他高级编程语言，这将是你编写的第一个代码。“Hello, world!” 对我们人类简简单单，但对电脑而言，却经历了更加复杂的底层过程，毕竟机器只能认识0和1。所以，几乎所有的程序员，当第一次实现与计算机成功沟通之后，他们的肾上腺素就会急剧上升(激动不已)。今天的主题便是与电脑有关，我们一起来看看大家都用电脑干些什么吧！</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;Hello, World!\n&quot;</span>) </span><br></pre></td></tr></table></figure>
-
-<style>.posts-expand .post-body img {
-  margin-left: auto !important;
-}</style>
-<div align="center">
-    <img src="/2024/01/25/Computer/hello-world.png" width="40%" height="40%">
-</div>
-
-<span id="more"></span>
-
-<hr>
-
-        <div id="aplayer-AyeWDyrX" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
-            <pre class="aplayer-lrc-content"></pre>
-        </div>
-        <script>
-          var ap = new APlayer({
-            element: document.getElementById("aplayer-AyeWDyrX"),
-            narrow: false,
-            autoplay: false,
-            showlrc: false,
-            music: {
-              title: "When do you use computer",
-              author: "Jack, Alice, Mike",
-              url: "computer.mp3",
-              pic: "/2024/01/25/Computer/computer.png",
-              lrc: ""
-            }
-          });
-          window.aplayers || (window.aplayers = []);
-          window.aplayers.push(ap);
-        </script>
-
-
-
-<p>There is a computer in my home, and my father and I <strong><font color="DeBlue">share</font></strong> it. My father is a manager of a company, so he often <strong><font color="DeBlue">talks to</font></strong> his customers on the computer. He also <strong><font color="DeBlue">goes on the Internet</font></strong> to <strong><font color="DeBlue">check the times of trains</font></strong>, <strong><font color="DeBlue">make travel plans, and buy tickets</font></strong>. I listen to music or <strong><font color="DeBlue">watch movies</font></strong> on it every Friday night. </p>
-<div align="right">—— Jack</div>
-
-<p>There is no computer in my home. I can only use it at school. <strong><font color="DeBlue">On the Internet</font></strong>, I <strong><font color="DeBlue">search for information</font></strong>, do my homework and <strong><font color="DeBlue">check my email</font></strong>. I have a friend in Australia. I can see her and talk to her on the Internet.</p>
-<div align="right">—— Alice</div>
-
-<p>We have a computer at home. My parents don’t use it. I can use it <strong><font color="DeBlue">on Sundays</font></strong>. I <strong><font color="DeBlue">send email to my friends</font></strong> and play computer games. But sometimes I play a lot of games and my mother doesn’t like it.</p>
-<div align="right">—— Mike</div>
-
-<hr>
-]]></content>
-      <categories>
-        <category>Science</category>
-      </categories>
-      <tags>
-        <tag>easy</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>My school day</title>
     <url>/2024/01/25/My-school-day/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h3 id="📖My-school-day"><a href="#📖My-school-day" class="headerlink" title="📖My school day"></a>📖<strong>My school day</strong></h3><p>This is my friend Alex, Greenall. He wants to share his school day with you.</p>
@@ -336,12 +278,12 @@
 
 <hr>
 
-        <div id="aplayer-vNtweRLG" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+        <div id="aplayer-zPdLrvMO" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
             <pre class="aplayer-lrc-content"></pre>
         </div>
         <script>
           var ap = new APlayer({
-            element: document.getElementById("aplayer-vNtweRLG"),
+            element: document.getElementById("aplayer-zPdLrvMO"),
             narrow: false,
             autoplay: false,
             showlrc: false,
@@ -597,6 +539,64 @@
 <h3 id="Download-the-passage"><a href="#Download-the-passage" class="headerlink" title="Download the passage"></a><a href="My-school-day.pdf"><font color="Orange">Download the passage</font></a></h3>]]></content>
       <categories>
         <category>School Life</category>
+      </categories>
+      <tags>
+        <tag>easy</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Computer</title>
+    <url>/2024/01/25/Computer/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="🖥️Hello-world"><a href="#🖥️Hello-world" class="headerlink" title="🖥️Hello, world!"></a>🖥️Hello, world!</h1><p>如今，无论大家学习C，C++，java，python，还是其他高级编程语言，这将是你编写的第一个代码。“Hello, world!” 对我们人类简简单单，但对电脑而言，却经历了更加复杂的底层过程，毕竟机器只能认识0和1。所以，几乎所有的程序员，当第一次实现与计算机成功沟通之后，他们的肾上腺素就会急剧上升(激动不已)。今天的主题便是与电脑有关，我们一起来看看大家都用电脑干些什么吧！</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;Hello, World!\n&quot;</span>) </span><br></pre></td></tr></table></figure>
+
+<style>.posts-expand .post-body img {
+  margin-left: auto !important;
+}</style>
+<div align="center">
+    <img src="/2024/01/25/Computer/hello-world.png" width="40%" height="40%">
+</div>
+
+<span id="more"></span>
+
+<hr>
+
+        <div id="aplayer-cmdVwzRb" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+            <pre class="aplayer-lrc-content"></pre>
+        </div>
+        <script>
+          var ap = new APlayer({
+            element: document.getElementById("aplayer-cmdVwzRb"),
+            narrow: false,
+            autoplay: false,
+            showlrc: false,
+            music: {
+              title: "When do you use computer",
+              author: "Jack, Alice, Mike",
+              url: "computer.mp3",
+              pic: "/2024/01/25/Computer/computer.png",
+              lrc: ""
+            }
+          });
+          window.aplayers || (window.aplayers = []);
+          window.aplayers.push(ap);
+        </script>
+
+
+
+<p>There is a computer in my home, and my father and I <strong><font color="DeBlue">share</font></strong> it. My father is a manager of a company, so he often <strong><font color="DeBlue">talks to</font></strong> his customers on the computer. He also <strong><font color="DeBlue">goes on the Internet</font></strong> to <strong><font color="DeBlue">check the times of trains</font></strong>, <strong><font color="DeBlue">make travel plans, and buy tickets</font></strong>. I listen to music or <strong><font color="DeBlue">watch movies</font></strong> on it every Friday night. </p>
+<div align="right">—— Jack</div>
+
+<p>There is no computer in my home. I can only use it at school. <strong><font color="DeBlue">On the Internet</font></strong>, I <strong><font color="DeBlue">search for information</font></strong>, do my homework and <strong><font color="DeBlue">check my email</font></strong>. I have a friend in Australia. I can see her and talk to her on the Internet.</p>
+<div align="right">—— Alice</div>
+
+<p>We have a computer at home. My parents don’t use it. I can use it <strong><font color="DeBlue">on Sundays</font></strong>. I <strong><font color="DeBlue">send email to my friends</font></strong> and play computer games. But sometimes I play a lot of games and my mother doesn’t like it.</p>
+<div align="right">—— Mike</div>
+
+<hr>
+]]></content>
+      <categories>
+        <category>Science</category>
       </categories>
       <tags>
         <tag>easy</tag>
