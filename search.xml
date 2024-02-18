@@ -26,12 +26,12 @@
 </tbody></table>
 <hr>
 <h3 id="Words-and-expressions"><a href="#Words-and-expressions" class="headerlink" title="Words and expressions"></a>Words and expressions</h3>
-        <div id="aplayer-OUBqjXTg" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+        <div id="aplayer-ffGThMRa" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
             <pre class="aplayer-lrc-content"></pre>
         </div>
         <script>
           var ap = new APlayer({
-            element: document.getElementById("aplayer-OUBqjXTg"),
+            element: document.getElementById("aplayer-ffGThMRa"),
             narrow: false,
             autoplay: false,
             showlrc: false,
@@ -116,12 +116,12 @@
 </tr>
 </tbody></table>
 <h3 id="While-listening"><a href="#While-listening" class="headerlink" title="While-listening"></a>While-listening</h3><h4 id="Activity-1-——-Before-going-to-the-zoo"><a href="#Activity-1-——-Before-going-to-the-zoo" class="headerlink" title="Activity 1 —— Before going to the zoo."></a>Activity 1 —— Before going to the zoo.</h4>
-        <div id="aplayer-LDeSrTSo" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+        <div id="aplayer-aPhgXkDm" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
             <pre class="aplayer-lrc-content"></pre>
         </div>
         <script>
           var ap = new APlayer({
-            element: document.getElementById("aplayer-LDeSrTSo"),
+            element: document.getElementById("aplayer-aPhgXkDm"),
             narrow: false,
             autoplay: false,
             showlrc: false,
@@ -145,12 +145,12 @@
 </li>
 </ul>
 <h4 id="Activity-2-——-A-trip-to-the-zoo"><a href="#Activity-2-——-A-trip-to-the-zoo" class="headerlink" title="Activity 2 —— A trip to the zoo"></a>Activity 2 —— A trip to the zoo</h4>
-        <div id="aplayer-bHReWcTO" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+        <div id="aplayer-kfqGzZGL" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
             <pre class="aplayer-lrc-content"></pre>
         </div>
         <script>
           var ap = new APlayer({
-            element: document.getElementById("aplayer-bHReWcTO"),
+            element: document.getElementById("aplayer-kfqGzZGL"),
             narrow: false,
             autoplay: false,
             showlrc: false,
@@ -291,12 +291,12 @@
 <p>中国的古人用北斗七星来辨别北方，西方人则用包含了北斗七星的“大熊星座”来辨识北方。希腊语arktos表示“熊”，引申表示“大熊星座”。因此正对着大熊星座的方向就被称为<strong>arctic</strong> ，也就是“北极的”。背对大熊星座的方向就是<strong>ant<font color="grey">arctic</font></strong>(南极的)，所以，南极洲的命名就是 <strong>the Antarctica。</strong></p>
 <h1 id="🐼Animals"><a href="#🐼Animals" class="headerlink" title="🐼Animals"></a>🐼<font color="lightblue">Animals</font></h1><p>Okay，餐前小点享受完了，我们正式进入正题。</p>
 
-        <div id="aplayer-BlBxysJU" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+        <div id="aplayer-PZCEvvyN" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
             <pre class="aplayer-lrc-content"></pre>
         </div>
         <script>
           var ap = new APlayer({
-            element: document.getElementById("aplayer-BlBxysJU"),
+            element: document.getElementById("aplayer-PZCEvvyN"),
             narrow: false,
             autoplay: false,
             showlrc: false,
@@ -504,12 +504,12 @@
 
 <hr>
 
-        <div id="aplayer-HhAoHwvh" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+        <div id="aplayer-wUizvpiD" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
             <pre class="aplayer-lrc-content"></pre>
         </div>
         <script>
           var ap = new APlayer({
-            element: document.getElementById("aplayer-HhAoHwvh"),
+            element: document.getElementById("aplayer-wUizvpiD"),
             narrow: false,
             autoplay: false,
             showlrc: false,
@@ -548,28 +548,34 @@
   <entry>
     <title>催作业啦</title>
     <url>/2024/02/18/Homework/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>大家新年好呀，给大家拜个晚年~<br>不知不觉，假期余额已经不足7天了……<br>那你们的寒假作业是否写完了呢？</p>
-<p>听我说，谢谢你，因为有你，作业收不齐~</p>
-<span id="more"></span>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><div align="center">各位新年好呀，给大家拜个晚年~</div> <br>
+<div align="center">不知不觉，假期余额已经不足7天了......</div> <br>
+<div align="center">那你们的寒假作业是否写完了呢？</div> <br>     
 
 <style>.posts-expand .post-body img {
   margin-left: auto !important;
 }</style>
 <div align="center"><img src="/2024/02/18/Homework/收作业.jpg" width="50%" height="50%"></div>
 
-<p>所以呢？</p>
+<span id="more"></span>
+
+<div align="center">所以呢？</div>
+
 <style>.posts-expand .post-body img {
   margin-left: auto !important;
 }</style>
 <div align="center"><img src="/2024/02/18/Homework/作业1.jpg" width="50%" height="50%"></div>
 
-<p>想必，各位内心的os是</p>
+<div align="center">想必，各位内心的os是</div>
+
 <style>.posts-expand .post-body img {
   margin-left: auto !important;
 }</style>
 <div align="center"><img src="/2024/02/18/Homework/求写作业.jpg" width="50%" height="50%"></div>
 
-<p>提前祝各位收假快乐！<br>一支笔，一晚上，一个奇迹！<br>我们下下周见！</p>
+<div align="center">提前祝各位收假快乐！</div>
+<div align="center">一支笔，一晚上，一个奇迹！</div>
+<div align="center">我们下下周见！</div>
 ]]></content>
       <categories>
         <category>Daily Life</category>
@@ -587,12 +593,12 @@
 
 <hr>
 
-        <div id="aplayer-yvqNnkkH" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+        <div id="aplayer-tSzvHfrD" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
             <pre class="aplayer-lrc-content"></pre>
         </div>
         <script>
           var ap = new APlayer({
-            element: document.getElementById("aplayer-yvqNnkkH"),
+            element: document.getElementById("aplayer-tSzvHfrD"),
             narrow: false,
             autoplay: false,
             showlrc: false,
@@ -851,6 +857,179 @@
       </categories>
       <tags>
         <tag>easy</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>School Clubs</title>
+    <url>/2024/02/18/School-clubs/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>Today, we will learn about different clubs at Rosie Bridge school.<br>We will read an article about <strong>the Clubs Fair</strong> at this school. </p>
+<p>Before we get started, let’s read a poster.  Please write the names of the clubs in the table. </p>
+<table>
+<thead>
+<tr>
+<th align="center">the art club&emsp;&emsp;&emsp; the cooking club&emsp;&emsp;&emsp; the chess club&emsp;&emsp;&emsp; the coding club&emsp;&emsp;&emsp; the math club &emsp;&emsp;&emsp; the photography club&emsp;&emsp;&emsp; the rocket club&emsp;&emsp;&emsp; the robot club</th>
+</tr>
+</thead>
+</table>
+<p> <img src="/2024/02/18/School-clubs/school-clubs.jpg"></p>
+<span id="more"></span>
+
+<table>
+<thead>
+<tr>
+<th align="center">Letters</th>
+<th align="center">School Clubs</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">A</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">B</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">C</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">D</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">E</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">F</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">G</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">H</td>
+<td align="center"></td>
+</tr>
+</tbody></table>
+<p><strong>What clubs do you have at your school? Make a list. Which school club do you attend(参加)</strong></p>
+<p>Keys: the dancing club; the drama club; the calligraphy club (书法社)</p>
+<h1 id="Pre-reading"><a href="#Pre-reading" class="headerlink" title="Pre-reading"></a>Pre-reading</h1><p>![](School-clubs&#x2F;the clubs fair.jpg)</p>
+<p>Before you read, look at the picture and answer the questions below. </p>
+<ol>
+<li>What is the article about: family life or school life?</li>
+<li>How many clubs can you find in the picture?</li>
+</ol>
+<h2 id="Vocabulary"><a href="#Vocabulary" class="headerlink" title="Vocabulary"></a>Vocabulary</h2><ol>
+<li><p>At a <em>fair</em>, people let you ________ things.</p>
+<p>a. take &emsp; &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;b. look at or buy</p>
+</li>
+<li><p>When you <em>attend</em> a class, you___________ it.<br>a. leave &emsp; &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;b. go to have</p>
+</li>
+<li><p>When a mum <em>teaches</em> her child to make a cake, she____. </p>
+<p>a. shows him&#x2F;her how to do it &emsp;&emsp;&emsp; b. makes it for him&#x2F;her</p>
+</li>
+<li><p>If something <em>disappears</em>, _________.</p>
+<p>a. everyone can see it&emsp;&emsp;&emsp;&emsp;&emsp;b. no one can see it</p>
+</li>
+<li><p>If something is <em>amazing</em>, it is very _________.</p>
+<p>a. good and surprising&emsp;&emsp;&emsp;&emsp;&emsp;b. bad and tiring</p>
+</li>
+</ol>
+<h2 id="Blank-filling"><a href="#Blank-filling" class="headerlink" title="Blank-filling"></a>Blank-filling</h2><p>Kelly is writing an email to Mandy. Complete her email with the words from the box.</p>
+<table>
+<thead>
+<tr>
+<th align="center">another&emsp;&emsp;&emsp; attended&emsp;&emsp;&emsp; disappeared&emsp;&emsp;&emsp; surprised&emsp;&emsp;&emsp; teach</th>
+</tr>
+</thead>
+</table>
+<p>Dear Mandy,</p>
+<p>Thanks for the email. My dad and I ______ the town fair last Friday. At the fair, my dad asked some farmers to ______ him how to grow vegetables. I played with some other children. Later, I couldn’t find my favourite red jacket. It ___<strong>! I wanted to buy</strong> one. But a few minutes later, an old lady found it and gave it back to me! I was very ______ People in small towns are so nice! Do you have fairs like this in your country?<br>Best wishes,<br>Kelly</p>
+<hr>
+<h1 id="While-reading"><a href="#While-reading" class="headerlink" title="While-reading"></a>While-reading</h1>
+        <div id="aplayer-EQVeHcLo" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+            <pre class="aplayer-lrc-content"></pre>
+        </div>
+        <script>
+          var ap = new APlayer({
+            element: document.getElementById("aplayer-EQVeHcLo"),
+            narrow: false,
+            autoplay: false,
+            showlrc: false,
+            music: {
+              title: "The Clubs Fair",
+              author: "the-clubs-fair.mp3",
+              url: "coding-club.jpg",
+              pic: "",
+              lrc: ""
+            }
+          });
+          window.aplayers || (window.aplayers = []);
+          window.aplayers.push(ap);
+        </script>   
+
+<p><font color="LiBlue">Linda and Leo are new students at Rosie Bridge School. Last month, they <strong>attended</strong> the Clubs Fair.<br></font><font color="lighblue">First, Linda and Leo <strong>learnt about</strong> the Rocket Club.<br>“Our club will teach you how to build rockets. Then you can <strong>launch</strong> them into the sky,” a boy said. “Watch!”<br>He took a rocket and launched it. The rocket <strong>disappeared</strong> into the sky. Linda and Leo were very surprised.<br>“Will it go all the way into space?” Linda asked.</font><br><font color="orange">“Of course it won’t,” a girl from another club <strong>shouted</strong>. “Our club is better. Come and <strong>join</strong> the Solar Power Club.”<br>“What do you do?” asked Leo.<br>“We <strong>make wonderful machines</strong>. They only use <strong>solar power</strong>. Look!” She took a toy car from the table and then used <strong>a remote control</strong> to drive it all around the playground.<br>“It uses power from the Sun,” said Linda. “That’s <strong>amazing</strong>!”</font><br><font color="grey">Linda and Leo learnt about many clubs. After the fair, they felt very excited.<br>“I want to join all the clubs,” said Linda.<br>“Me too!” said Leo.</font></p>
+<hr>
+<h2 id="Main-Ideas"><a href="#Main-Ideas" class="headerlink" title="Main Ideas"></a>Main Ideas</h2><p>A Linda and Leo learnt about the Rocket Club &emsp;&emsp;&emsp;&emsp;The Green Part</p>
+<p>B Their feelings after visiting many clubs&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;The Blue Part</p>
+<p>C Linda and Leo visited the Solar Power Club&emsp;&emsp;&emsp;&emsp;The Orange Part</p>
+<p>D Leo and Linda went to the Clubs Fair&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; The Grey Part</p>
+<h2 id="Comprehension"><a href="#Comprehension" class="headerlink" title="Comprehension"></a>Comprehension</h2><p><strong>A. Read the blue part and choose the best answers.</strong></p>
+<blockquote>
+<p>First, Linda and Leo <strong>learnt about</strong> the Rocket Club.<br>“Our club will teach you how to build rockets. Then you can <strong>launch</strong> them into the sky,” a boy said. “Watch!”<br>He took a rocket and launched it. The rocket <strong>disappeared</strong> into the sky. Linda and Leo were very surprised.<br>“Will it go all the way into space?” Linda asked.</p>
+</blockquote>
+<ol>
+<li><p>What can students do in the Rocket Club?</p>
+<p>A. learn to build rockets<br>B. travel into space in rockets<br>C. draw pictures of rockets<br>D. launch rockets into the sky</p>
+</li>
+<li><p>How did Linda feel when they saw the rocket disappeared into the sky?</p>
+<p>A. Surprised.<br>B. Excited.<br>C. Frightened.<br>D. Terrible.</p>
+</li>
+</ol>
+<p><strong>B. Read the orange part and decide if the following statements are true or false.</strong> </p>
+<blockquote>
+<p>“Of course it won’t,” a girl from another club <strong>shouted</strong>. “Our club is better. Come and <strong>join</strong> the Solar Power Club.”<br>“What do you do?” asked Leo.<br>“We <strong>make wonderful machines</strong>. They only use <strong>solar power</strong>. Look!” She took a toy car from the table and then used <strong>a remote control</strong> to drive it all around the playground.<br>“It uses power from the Sun,” said Linda. “That’s <strong>amazing</strong>!”</p>
+</blockquote>
+<ol>
+<li>The Solar Power Club teaches students to use solar power.</li>
+<li>The girl used solar power to drive the car.</li>
+<li>Solar power comes from the Sun.</li>
+</ol>
+<p><strong>C. Read the grey part and answer the questions.</strong></p>
+<blockquote>
+<p> Linda and Leo learnt about many clubs. After the fair, they felt very excited.<br>“I want to join all the clubs,” said Linda.<br>“Me too!” said Leo.</p>
+</blockquote>
+<ol>
+<li>How did they feel after the fair?</li>
+<li>Can Linda and Leo join all the clubs?</li>
+</ol>
+<p><strong>D. Find sentences from the article to go with these pictures.</strong></p>
+<table>
+<thead>
+<tr>
+<th><img src="/2024/02/18/School-clubs/p1.jpg"></th>
+<th><img src="/2024/02/18/School-clubs/p2.jpg"></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><img src="/2024/02/18/School-clubs/p3.jpg"></td>
+<td><img src="/2024/02/18/School-clubs/p4.jpg"></td>
+</tr>
+</tbody></table>
+<h1 id="Post-reading"><a href="#Post-reading" class="headerlink" title="Post-reading"></a>Post-reading</h1><p>Read the following passages.</p>
+<p>Welcome to our basketball. In our club, you will learn how to play basketball well. We teach you pulling skills and we do training on the school playground every afternoon. What’s more, you will have the chance to play a match every month. I believe you will improve your basketball skills very quickly. It’s so much fun. Come and join us!</p>
+<p>Welcome to English. In our club, you will learn how to improve your English. We have an English corner twice a week. Also, you will have the chance to listen to English speeches on Friday afternoons. I believe you will enjoy learning English if you join us. It’s so much fun.</p>
+<p><strong>Now imitate the articles above, and then write something to attract(吸引) students to join your club.</strong></p>
+<p><img src="/2024/02/18/School-clubs/Writing.jpg"></p>
+]]></content>
+      <categories>
+        <category>School Life</category>
+      </categories>
+      <tags>
+        <tag>normal</tag>
       </tags>
   </entry>
   <entry>
