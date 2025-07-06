@@ -1,0 +1,533 @@
+<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autopage</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <style>
+        :root {
+            --font-size: 16px;
+            --font-family: 'Microsoft YaHei', sans-serif;
+        }
+        
+        body {
+            font-family: var(--font-family);
+            font-size: var(--font-size);
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 15px 20px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        
+        h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+        
+        .menu-bar {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 15px;
+            padding: 10px;
+            background-color: #f8f9fa;
+            border-radius: 5px;
+        }
+        
+        .menu-group {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            min-width: 150px;
+        }
+        
+        .menu-group label {
+            font-weight: bold;
+            font-size: 14px;
+            color: #000;
+        }
+        
+        .container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        .input-section {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .input-area {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .input-box {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        textarea {
+            width: 100%;
+            height: 200px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            resize: vertical;
+            font-family: inherit;
+            font-size: inherit;
+        }
+        
+        select, input {
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-family: inherit;
+        }
+        
+        button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: inherit;
+            transition: background-color 0.3s;
+        }
+        
+        button:hover {
+            background-color: #2980b9;
+        }
+        
+        .button-group {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        
+        .output {
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 4px;
+            background-color: #f9f9f9;
+        }
+        
+        .word-list {
+            column-count: 3;
+            column-gap: 30px;
+        }
+        
+        .word-item {
+            break-inside: avoid;
+            margin-bottom: 15px;
+            padding-bottom: 2px;
+            border-bottom: 1px dashed #ddd;
+        }
+        
+        .word {
+            font-weight: bold;
+            font-size: calc(var(--font-size) + 2px);
+        }
+        
+        .meaning {
+            color: #555;
+            margin-top: 5px;
+        }
+        
+        .blank {
+            display: inline-block;
+            width: 100%;
+            border-bottom: 1px solid #333;
+            margin-top: 5px;
+            height: 3em;
+        }
+        
+        .meaning-first {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .import-options {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        
+        #worksheetPreviewTitle {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        @media (max-width: 768px) {
+            .word-list {
+                column-count: 2;
+            }
+            
+            .menu-group {
+                min-width: 120px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .word-list {
+                column-count: 1;
+            }
+            
+            .input-area {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Autopage 排版工具</h1>
+        <div class="menu-bar">
+            <div class="menu-group">
+                <label for="worksheetTitle">默写单标题</label>
+                <input type="text" id="worksheetTitle" placeholder="输入默写单标题" value="单词默写单">
+            </div>
+            
+            <div class="menu-group">
+                <label for="columns">列数设置</label>
+                <select id="columns">
+                    <option value="1">1列</option>
+                    <option value="2">2列</option>
+                    <option value="3" selected>3列</option>
+                    <option value="4">4列</option>
+                </select>
+            </div>
+            
+            <div class="menu-group">
+                <label for="showMeaning">释义显示</label>
+                <select id="showMeaning">
+                    <option value="show">显示释义</option>
+                    <option value="hide">隐藏释义</option>
+                    <option value="meaning-only">仅显示释义</option>
+                </select>
+            </div>
+            
+            <div class="menu-group">
+                <label for="wordOrder">单词顺序</label>
+                <select id="wordOrder">
+                    <option value="original">原顺序</option>
+                    <option value="random">随机顺序</option>
+                </select>
+            </div>
+            
+            <div class="menu-group">
+                <label for="fontFamily">字体选择</label>
+                <select id="fontFamily">
+                    <option value="'Microsoft YaHei', sans-serif">微软雅黑</option>
+                    <option value="'SimSun', serif">宋体</option>
+                    <option value="'KaiTi', serif">楷体</option>
+                    <option value="'Arial', sans-serif">Arial</option>
+                    <option value="'Times New Roman', serif">Times New Roman</option>
+                </select>
+            </div>
+            
+            <div class="menu-group">
+                <label for="fontSize">字体大小</label>
+                <select id="fontSize">
+                    <option value="14px">小</option>
+                    <option value="16px" selected>中</option>
+                    <option value="18px">大</option>
+                    <option value="20px">特大</option>
+                </select>
+            </div>
+        </div>
+    </header>
+    
+    <div class="container">
+        <div class="input-section">
+            <h3>输入单词列表</h3>
+            
+            <div class="import-options">
+                <span>导入格式:</span>
+                <label><input type="radio" name="importFormat" value="word-meaning" checked> 单词+释义</label>
+                <label><input type="radio" name="importFormat" value="word-only"> 仅单词</label>
+                <label><input type="radio" name="importFormat" value="column"> 分列导入</label>
+            </div>
+            
+            <div class="input-area">
+                <div class="input-box" id="wordInputContainer">
+                    <textarea id="wordInput" placeholder="输入单词和释义，每行一个单词，格式: 单词[空格或制表符]释义
+
+例如:
+apple 苹果
+banana 香蕉
+orange 橙子"></textarea>
+                </div>
+                
+                <div class="input-box" id="meaningInputContainer" style="display:none;">
+                    <textarea id="meaningInput" placeholder="输入释义，每行一个，与单词一一对应"></textarea>
+                </div>
+            </div>
+            
+            <div class="button-group">
+                <button id="generateBtn">生成默写表</button>
+                <button id="exportPdfBtn">导出PDF</button>
+                <button id="clearBtn">清空内容</button>
+                <button id="exampleBtn">加载示例</button>
+            </div>
+        </div>
+        
+        <div class="output">
+            <h3 id="worksheetPreviewTitle">单词默写单</h3>
+            <div id="wordList" class="word-list"></div>
+        </div>
+    </div>
+
+    <script>
+        // 初始化jsPDF
+        const { jsPDF } = window.jspdf;
+        
+        // DOM元素
+        const wordInput = document.getElementById('wordInput');
+        const meaningInput = document.getElementById('meaningInput');
+        const wordInputContainer = document.getElementById('wordInputContainer');
+        const meaningInputContainer = document.getElementById('meaningInputContainer');
+        const importFormatRadios = document.getElementsByName('importFormat');
+        const fontFamilySelect = document.getElementById('fontFamily');
+        const fontSizeSelect = document.getElementById('fontSize');
+        const worksheetTitleInput = document.getElementById('worksheetTitle');
+        const worksheetPreviewTitle = document.getElementById('worksheetPreviewTitle');
+        
+        // 事件监听
+        document.getElementById('generateBtn').addEventListener('click', generateWordList);
+        document.getElementById('exportPdfBtn').addEventListener('click', exportToPdf);
+        document.getElementById('clearBtn').addEventListener('click', clearInputs);
+        document.getElementById('exampleBtn').addEventListener('click', loadExample);
+        worksheetTitleInput.addEventListener('input', updateWorksheetTitle);
+        
+        // 更新默写单标题
+        function updateWorksheetTitle() {
+            worksheetPreviewTitle.textContent = worksheetTitleInput.value || '单词默写单';
+        }
+        
+        // 导入格式切换
+        Array.from(importFormatRadios).forEach(radio => {
+            radio.addEventListener('change', function() {
+                if (this.value === 'column') {
+                    wordInput.placeholder = "输入单词，每行一个";
+                    wordInputContainer.style.flex = "1";
+                    meaningInputContainer.style.display = "block";
+                } else if (this.value === 'word-only') {
+                    wordInput.placeholder = "输入单词，每行一个";
+                    wordInputContainer.style.flex = "1";
+                    meaningInputContainer.style.display = "none";
+                } else {
+                    wordInput.placeholder = "输入单词和释义，每行一个，格式: 单词[空格或制表符]释义";
+                    wordInputContainer.style.flex = "1";
+                    meaningInputContainer.style.display = "none";
+                }
+            });
+        });
+        
+        // 字体设置
+        fontFamilySelect.addEventListener('change', function() {
+            document.documentElement.style.setProperty('--font-family', this.value);
+            generateWordList();
+        });
+        
+        fontSizeSelect.addEventListener('change', function() {
+            document.documentElement.style.setProperty('--font-size', this.value);
+            generateWordList();
+        });
+        
+        // 生成单词列表
+        function generateWordList() {
+            const columns = document.getElementById('columns').value;
+            const showMeaning = document.getElementById('showMeaning').value;
+            const wordOrder = document.getElementById('wordOrder').value;
+            const importFormat = document.querySelector('input[name="importFormat"]:checked').value;
+            
+            let wordPairs = [];
+            
+            if (importFormat === 'column') {
+                const words = wordInput.value.split('\n').filter(line => line.trim() !== '');
+                const meanings = meaningInput.value.split('\n').filter(line => line.trim() !== '');
+                
+                const maxLength = Math.max(words.length, meanings.length);
+                for (let i = 0; i < maxLength; i++) {
+                    wordPairs.push({
+                        word: words[i] || '',
+                        meaning: meanings[i] || ''
+                    });
+                }
+            } 
+            else if (importFormat === 'word-only') {
+                wordPairs = wordInput.value.split('\n')
+                    .filter(line => line.trim() !== '')
+                    .map(word => ({ word: word.trim(), meaning: '' }));
+            } 
+            else {
+                wordPairs = wordInput.value.split('\n')
+                    .filter(line => line.trim() !== '')
+                    .map(line => {
+                        const parts = line.split(/[\t ]+/);
+                        return {
+                            word: parts[0] || '',
+                            meaning: parts.slice(1).join(' ') || ''
+                        };
+                    });
+            }
+            
+            if (wordOrder === 'random') {
+                wordPairs = shuffleArray(wordPairs);
+            }
+            
+            const wordList = document.getElementById('wordList');
+            wordList.innerHTML = '';
+            wordList.style.columnCount = columns;
+            
+            wordPairs.forEach(pair => {
+                const item = document.createElement('div');
+                item.className = 'word-item';
+                
+                if (showMeaning === 'meaning-only') {
+                    item.classList.add('meaning-first');
+                }
+                
+                const wordEl = document.createElement('div');
+                wordEl.className = 'word';
+                
+                const meaningEl = document.createElement('div');
+                meaningEl.className = 'meaning';
+                
+                if (showMeaning === 'show') {
+                    wordEl.textContent = pair.word;
+                    meaningEl.textContent = pair.meaning;
+                } 
+                else if (showMeaning === 'hide') {
+                    wordEl.textContent = pair.word;
+                    meaningEl.innerHTML = '<span class="blank"></span>';
+                } 
+                else if (showMeaning === 'meaning-only') {
+                    meaningEl.textContent = pair.meaning;
+                    wordEl.innerHTML = '<span class="blank"></span>';
+                }
+                
+                if (showMeaning === 'meaning-only') {
+                    item.appendChild(meaningEl);
+                    item.appendChild(wordEl);
+                } else {
+                    item.appendChild(wordEl);
+                    item.appendChild(meaningEl);
+                }
+                
+                wordList.appendChild(item);
+            });
+            
+            updateWorksheetTitle();
+        }
+        
+        // 导出PDF功能
+        function exportToPdf() {
+            const output = document.querySelector('.output');
+            const title = worksheetTitleInput.value || '单词默写单';
+            
+            // 临时调整样式以优化PDF输出
+            const originalColumnCount = document.getElementById('wordList').style.columnCount;
+            const originalFontSize = document.documentElement.style.getPropertyValue('--font-size');
+            
+            document.getElementById('wordList').style.columnCount = document.getElementById('columns').value;
+            document.documentElement.style.setProperty('--font-size', '16px');
+            
+            html2canvas(output, {
+                scale: 2,
+                logging: false,
+                useCORS: true,
+                allowTaint: true
+            }).then(canvas => {
+                const imgData = canvas.toDataURL('image/png');
+                const pdf = new jsPDF('p', 'mm', 'a4');
+                const imgWidth = 190; // A4纸张宽度减去边距
+                const pageHeight = 277; // A4纸张高度减去边距
+                const imgHeight = canvas.height * imgWidth / canvas.width;
+                let heightLeft = imgHeight;
+                let position = 10; // 顶部边距
+                
+                pdf.addImage(imgData, 'PNG', 10, position, imgWidth, imgHeight);
+                heightLeft -= pageHeight;
+                
+                // 添加多页支持
+                while (heightLeft >= 0) {
+                    position = heightLeft - imgHeight;
+                    pdf.addPage();
+                    pdf.addImage(imgData, 'PNG', 10, position, imgWidth, imgHeight);
+                    heightLeft -= pageHeight;
+                }
+                
+                pdf.save(title + '.pdf');
+                
+                // 恢复原始样式
+                document.getElementById('wordList').style.columnCount = originalColumnCount;
+                document.documentElement.style.setProperty('--font-size', originalFontSize);
+            });
+        }
+        
+        // 清空输入
+        function clearInputs() {
+            wordInput.value = '';
+            meaningInput.value = '';
+            worksheetTitleInput.value = '单词默写单';
+            document.getElementById('wordList').innerHTML = '';
+            updateWorksheetTitle();
+        }
+        
+        // 加载示例
+        function loadExample() {
+            const exampleText = `apple 苹果
+banana 香蕉
+orange 橙子
+grape 葡萄
+pear 梨
+peach 桃子
+watermelon 西瓜
+strawberry 草莓
+blueberry 蓝莓
+pineapple 菠萝
+mango 芒果
+lemon 柠檬
+cherry 樱桃
+kiwi 猕猴桃
+coconut 椰子`;
+            
+            wordInput.value = exampleText;
+            worksheetTitleInput.value = '水果单词默写单';
+            generateWordList();
+        }
+        
+        // 随机打乱数组
+        function shuffleArray(array) {
+            const newArray = [...array];
+            for (let i = newArray.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [newArray[i], newArray[j]] = [newArray[j], newArray[i]];
+            }
+            return newArray;
+        }
+        
+        // 页面加载时生成示例
+        window.addEventListener('load', loadExample);
+    </script>
+</body>
+</html>
