@@ -1,484 +1,941 @@
-<!DOCTYPE html>
-<html lang="en">
+<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><!DOCTYPE html>
+<html lang="zh-CN">
 <head>
-  <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
-<meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 7.1.1">
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
-  <link rel="mask-icon" href="/images/logo.svg" color="#222">
-
-<link rel="stylesheet" href="/css/main.css">
-
-<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open Sans:300,300italic,400,400italic,700,700italic|PT Serif:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
-<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
-  <link rel="stylesheet" href="/lib/pace/pace-theme-minimal.min.css">
-  <script src="/lib/pace/pace.min.js"></script>
-
-<script id="hexo-configurations">
-    var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"stellasalad.github.io","root":"/","scheme":"Mist","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
-  </script>
-
-  <meta name="description" content="# Hello, the world! ## 本人有点懒，还没做呢🥱！">
-<meta property="og:type" content="website">
-<meta property="og:title" content="iEnglish">
-<meta property="og:url" content="https://stellasalad.github.io/tools/reader/index.html">
-<meta property="og:site_name" content="iEnglish">
-<meta property="og:description" content="# Hello, the world! ## 本人有点懒，还没做呢🥱！">
-<meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2025-07-06T10:15:57.257Z">
-<meta property="article:modified_time" content="2025-07-06T10:15:57.248Z">
-<meta property="article:author" content="Stella">
-<meta name="twitter:card" content="summary">
-
-<link rel="canonical" href="https://stellasalad.github.io/tools/reader/">
-
-
-<script id="page-configurations">
-  // https://hexo.io/docs/variables.html
-  CONFIG.page = {
-    sidebar: "",
-    isHome : false,
-    isPost : false,
-    lang   : 'en'
-  };
-</script>
-
-  <title> | iEnglish
-</title>
-  
-
-
-
-
-
-
-  <noscript>
-  <style>
-  .use-motion .brand,
-  .use-motion .menu-item,
-  .sidebar-inner,
-  .use-motion .post-block,
-  .use-motion .pagination,
-  .use-motion .comments,
-  .use-motion .post-header,
-  .use-motion .post-body,
-  .use-motion .collection-header { opacity: initial; }
-
-  .use-motion .site-title,
-  .use-motion .site-subtitle {
-    opacity: initial;
-    top: initial;
-  }
-
-  .use-motion .logo-line-before i { left: initial; }
-  .use-motion .logo-line-after i { right: initial; }
-  </style>
-</noscript>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reading Helper</title>
+    <!-- 引入必要的库 -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+            background-color: #f9f9f9;
+        }
+        /* 步骤指示条样式 */
+        .step-indicator {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 30px;
+            position: relative;
+        }
+        .step-indicator::before {
+            content: '';
+            position: absolute;
+            top: 15px;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background-color: #e0e0e0;
+            z-index: 1;
+        }
+        .step {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            z-index: 2;
+        }
+        .step-number {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: #e0e0e0;
+            color: #666;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .step.active .step-number {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .step.completed .step-number {
+            background-color: #81C784;
+            color: white;
+        }
+        .step-label {
+            font-size: 14px;
+            color: #666;
+        }
+        .step.active .step-label,
+        .step.completed .step-label {
+            color: #333;
+            font-weight: bold;
+        }
+        
+        /* 内容区域样式 */
+        .content-section {
+            display: none;
+            margin-bottom: 20px;
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .content-section.active {
+            display: block;
+        }
+        #title-input {
+            width: 97%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 16px;
+        }
+        #text-input {
+            width: 97%;
+            height: 200px;
+            font-family: 'Times New Roman', Times, serif;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .annotated {
+            background-color: #ffeb3b;
+            cursor: pointer;
+            padding: 0 2px;
+            border-radius: 3px;
+            position: relative;
+        }
+        .remove-annotation {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            background-color: #ff4444;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 16px;
+            height: 16px;
+            font-size: 10px;
+            line-height: 16px;
+            text-align: center;
+            cursor: pointer;
+            display: none;
+        }
+        .annotated:hover .remove-annotation {
+            display: block;
+        }
+        .paragraph-container {
+            margin-bottom: 30px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 15px;
+        }
+        .paragraph-explanations {
+            background-color: #f9f9f9;
+            padding: 15px;
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+        .explanation-item {
+            margin-bottom: 8px;
+            padding-left: 10px;
+            border-left: 3px solid #4caf50;
+        }
+        .explanation-header {
+            cursor: pointer;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .explanation-content {
+            margin-top: 8px;
+            padding: 8px;
+            background-color: #f5f5f5;
+            border-radius: 4px;
+            display: none;
+        }
+        .explanation-content.show {
+            display: block;
+        }
+        .button-group {
+            margin-top: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        button {
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        button.secondary {
+            background-color: #f1f1f1;
+            color: #333;
+        }
+        button.secondary:hover {
+            background-color: #e0e0e0;
+        }
+        button:disabled {
+            background-color: #cccccc;
+            cursor: not-allowed;
+        }
+        #annotate-btn {
+            display: none;
+            margin-top: 10px;
+        }
+        .selection-hint {
+            color: #666;
+            font-size: 14px;
+            margin-top: 5px;
+        }
+        /* API状态和加载指示器 */
+        .loading {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid rgba(0,0,0,.3);
+            border-radius: 50%;
+            border-top-color: #4CAF50;
+            animation: spin 1s ease-in-out infinite;
+            margin-right: 10px;
+        }
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        .api-status {
+            margin-top: 10px;
+            padding: 8px;
+            border-radius: 4px;
+            display: none;
+        }
+        .api-status.success {
+            background-color: #e8f5e9;
+            color: #2e7d32;
+        }
+        .api-status.error {
+            background-color: #ffebee;
+            color: #c62828;
+        }
+        .progress-container {
+            width: 100%;
+            background-color: #f1f1f1;
+            margin: 20px 0;
+        }
+        .progress-bar {
+            height: 30px;
+            background-color: #4CAF50;
+            text-align: center;
+            line-height: 30px;
+            color: white;
+            width: 0%;
+            transition: width 0.3s;
+        }
+        .loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255,255,255,0.8);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+        .loading-message {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+        /* PDF预览样式 */
+        .pdf-preview {
+                    background-color: white;
+                    padding: 20px;
+                    margin: 20px 0;
+                    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+                }
+        .pdf-header {
+            text-align: center;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #4CAF50;
+        }
+        .pdf-footer {
+            text-align: center;
+            margin-top: 20px;
+            padding-top: 10px;
+            border-top: 1px solid #eee;
+            font-size: 12px;
+            color: #777;
+        }
+    </style>
 </head>
-
-<body itemscope itemtype="http://schema.org/WebPage">
-  <div class="container use-motion">
-    <div class="headband"></div>
-
-    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-container">
-  <div class="site-nav-toggle">
-    <div class="toggle" aria-label="Toggle navigation bar">
-      <span class="toggle-line toggle-line-first"></span>
-      <span class="toggle-line toggle-line-middle"></span>
-      <span class="toggle-line toggle-line-last"></span>
-    </div>
-  </div>
-
-  <div class="site-meta">
-
-    <a href="/" class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <h1 class="site-title">iEnglish</h1>
-      <span class="logo-line-after"><i></i></span>
-    </a>
-  </div>
-
-  <div class="site-nav-right">
-    <div class="toggle popup-trigger">
-        <i class="fa fa-search fa-fw fa-lg"></i>
-    </div>
-  </div>
-</div>
-
-
-
-
-<nav class="site-nav">
-  <ul id="menu" class="main-menu menu">
-        <li class="menu-item menu-item-home">
-
-    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
-
-  </li>
-        <li class="menu-item menu-item-categories">
-
-    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a>
-
-  </li>
-        <li class="menu-item menu-item-tags">
-
-    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a>
-
-  </li>
-        <li class="menu-item menu-item-archives">
-
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
-
-  </li>
-        <li class="menu-item menu-item-tools">
-
-    <a href="/tools/" rel="section"><i class="fa fa-folder fa-fw"></i>Tools</a>
-
-  </li>
-      <li class="menu-item menu-item-search">
-        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
-        </a>
-      </li>
-  </ul>
-</nav>
-
-
-
-  <div class="search-pop-overlay">
-    <div class="popup search-popup">
-        <div class="search-header">
-  <span class="search-icon">
-    <i class="fa fa-search"></i>
-  </span>
-  <div class="search-input-container">
-    <input autocomplete="off" autocapitalize="off"
-           placeholder="Searching..." spellcheck="false"
-           type="search" class="search-input">
-  </div>
-  <span class="popup-btn-close">
-    <i class="fa fa-times-circle"></i>
-  </span>
-</div>
-<div id="search-result">
-  <div id="no-result">
-    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
-  </div>
-</div>
-
-    </div>
-  </div>
-
-</div>
-    </header>
-
+<body>
+    <h1>Reading Helper</h1>
     
-  <div class="back-to-top">
-    <i class="fa fa-arrow-up"></i>
-    <span>0%</span>
-  </div>
-
-
-    <main class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          
-  
-  
-
-          <div class="content page posts-expand">
-            
-
-    
-    
-    
-    <div class="post-block" lang="en">
-      <header class="post-header">
-
-<h1 class="post-title" itemprop="name headline">
-</h1>
-
-<div class="post-meta">
-  
-  <ul class="breadcrumb">
-          
-            <li><a href="/tools/">TOOLS</a></li>
-          <li>READER</li>
-        
-  </ul>
-
-</div>
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
-          # Hello, the world!
-## 本人有点懒，还没做呢🥱！
-
-      </div>
-      
-      
-      
-    </div>
-    
-  <ul class="breadcrumb">
-          
-            <li><a href="/tools/">TOOLS</a></li>
-          <li>READER</li>
-        
-  </ul>
-
-    
-    
-    
-
-
-          </div>
-          
-    <div class="comments" id="valine-comments"></div>
-
-<script>
-  window.addEventListener('tabs:register', () => {
-    let { activeClass } = CONFIG.comments;
-    if (CONFIG.comments.storage) {
-      activeClass = localStorage.getItem('comments_active') || activeClass;
-    }
-    if (activeClass) {
-      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
-      if (activeTab) {
-        activeTab.click();
-      }
-    }
-  });
-  if (CONFIG.comments.storage) {
-    window.addEventListener('tabs:click', event => {
-      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
-      let commentClass = event.target.classList[1];
-      localStorage.setItem('comments_active', commentClass);
-    });
-  }
-</script>
-
+    <!-- 步骤指示条 -->
+    <div class="step-indicator">
+        <div class="step active" data-step="1">
+            <div class="step-number">1</div>
+            <div class="step-label">输入内容</div>
         </div>
-          
-  
-  <div class="toggle sidebar-toggle">
-    <span class="toggle-line toggle-line-first"></span>
-    <span class="toggle-line toggle-line-middle"></span>
-    <span class="toggle-line toggle-line-last"></span>
-  </div>
-
-  <aside class="sidebar">
-    <div class="sidebar-inner">
-
-      <ul class="sidebar-nav motion-element">
-        <li class="sidebar-nav-toc">
-          Table of Contents
-        </li>
-        <li class="sidebar-nav-overview">
-          Overview
-        </li>
-      </ul>
-
-      <!--noindex-->
-      <div class="post-toc-wrap sidebar-panel">
-      </div>
-      <!--/noindex-->
-
-      <div class="site-overview-wrap sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <img class="site-author-image" itemprop="image" alt="Stella"
-      src="/images/avatar.jpg">
-  <p class="site-author-name" itemprop="name">Stella</p>
-  <div class="site-description" itemprop="description">Learn it step by step</div>
-</div>
-<div class="site-state-wrap motion-element">
-  <nav class="site-state">
-      <div class="site-state-item site-state-posts">
-          <a href="/archives/">
-        
-          <span class="site-state-item-count">7</span>
-          <span class="site-state-item-name">posts</span>
-        </a>
-      </div>
-      <div class="site-state-item site-state-categories">
-            <a href="/categories/">
-          
-        <span class="site-state-item-count">4</span>
-        <span class="site-state-item-name">categories</span></a>
-      </div>
-      <div class="site-state-item site-state-tags">
-            <a href="/tags/">
-          
-        <span class="site-state-item-count">3</span>
-        <span class="site-state-item-name">tags</span></a>
-      </div>
-  </nav>
-</div>
-  <div class="links-of-author motion-element">
-      <span class="links-of-author-item">
-        <a href="mailto:stellaforstars@163.com" title="E-Mail → mailto:stellaforstars@163.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
-      </span>
-      <span class="links-of-author-item">
-        <a href="https://space.bilibili.com/99590227" title="Bilibili → https:&#x2F;&#x2F;space.bilibili.com&#x2F;99590227" rel="noopener" target="_blank"><i class="fa custom bilibili fa-fw"></i>Bilibili</a>
-      </span>
-      <span class="links-of-author-item">
-        <a href="https://weibo.com/u/6110336076" title="Weibo → https:&#x2F;&#x2F;weibo.com&#x2F;u&#x2F;6110336076" rel="noopener" target="_blank"><i class="fab fa-weibo fa-fw"></i>Weibo</a>
-      </span>
-  </div>
-
-
-
-      </div>
-
+        <div class="step" data-step="2">
+            <div class="step-number">2</div>
+            <div class="step-label">标注内容</div>
+        </div>
+        <div class="step" data-step="3">
+            <div class="step-number">3</div>
+            <div class="step-label">查看解释</div>
+        </div>
     </div>
-  </aside>
-  <div id="sidebar-dimmer"></div>
+    
+    <!-- 第一步：输入内容 -->
+    <div id="step1" class="content-section active">
+        <h2>输入内容</h2>
+        <input type="text" id="title-input" placeholder="输入文章标题（可选）">
+        <textarea id="text-input" placeholder="请在此输入您要阅读的文章内容（支持Markdown语法）..."></textarea>
+        <div class="button-group">
+            <button id="next-to-step2">下一步</button>
+        </div>
+    </div>
+    
+    <!-- 第二步：标注内容 -->
+    <div id="step2" class="content-section">
+        <h2>标注单词或短语</h2>
+        <p>选择标注方式：</p>
+        <ul>
+            <li>双击单词或短语直接标注</li>
+            <li>或选中文本后点击下方"标注选中内容"按钮</li>
+            <li>鼠标悬停在标注上可点击×取消标注</li>
+        </ul>
+        <div id="rendered-text" class="markdown-content"></div>
+        <button id="annotate-btn">标注选中内容</button>
+        <p class="selection-hint" id="selection-hint"></p>
+        <div class="button-group">
+            <button id="back-to-step1" class="secondary">上一步</button>
+            <button id="next-to-step3">下一步</button>
+        </div>
+    </div>
+    
+    <!-- 第三步：查看解释 -->
+    <div id="step3" class="content-section">
+        <h2>查看解释</h2>
+        <div id="api-status" class="api-status"></div>
+        <div id="pdf-preview" class="pdf-preview">
+            <div class="pdf-header">
+                <h1 id="pdf-title">阅读笔记</h1>
+                <p>生成日期: <span id="pdf-date"></span></p>
+            </div>
+            <div id="content-with-explanations" class="markdown-content"></div>
+            <div class="pdf-footer">
+                <p>由Reading Helper生成</p>
+            </div>
+        </div>
+        <div class="button-group">
+            <button id="back-to-step2" class="secondary">上一步</button>
+            <button id="download-btn">下载PDF</button>
+        </div>
+    </div>
 
+    <!-- 加载屏幕 -->
+    <div id="loading-screen" class="loading-screen" style="display: none;">
+        <div class="loading"></div>
+        <div class="loading-message" id="loading-message">正在获取解释，请稍候...</div>
+        <div class="progress-container">
+            <div id="api-progress-bar" class="progress-bar">0%</div>
+        </div>
+    </div>
 
-      </div>
-    </main>
-
-    <footer class="footer">
-      <div class="footer-inner">
+    <script>
+        // 初始化jsPDF（使用UMD版本）
+        const { jsPDF } = window.jspdf;
         
+        // 确保marked.js已加载
+        function checkMarkedLoaded() {
+            if (typeof marked === 'undefined') {
+                console.error('marked.js未正确加载，尝试重新加载...');
+                const script = document.createElement('script');
+                script.src = 'https://cdn.jsdelivr.net/npm/marked/marked.min.js';
+                script.onload = initApp;
+                document.head.appendChild(script);
+                return false;
+            }
+            return true;
+        }
 
-        
+        // 主应用初始化
+        function initApp() {
+            if (!checkMarkedLoaded()) return;
+            
+            console.log('marked.js已加载:', typeof marked);
+            
+            // 配置DeepSeek API
+            const DEEPSEEK_API_KEY = 'sk-c861765ba59b48698caa6369ce3a976e';
+            const DEEPSEEK_API_URL = 'https://api.deepseek.com/v1/chat/completions';
+            
+            // 存储数据
+            let paragraphsData = [];
+            let currentSelection = null;
+            let allExplanations = [];
+            let documentTitle = "阅读笔记"; // 默认标题
+            
+            // 更新步骤状态
+            function updateStepIndicator(currentStep) {
+                document.querySelectorAll('.step').forEach((step, index) => {
+                    step.classList.remove('active', 'completed');
+                    const stepNum = parseInt(step.dataset.step);
+                    
+                    if (stepNum === currentStep) {
+                        step.classList.add('active');
+                    } else if (stepNum < currentStep) {
+                        step.classList.add('completed');
+                    }
+                });
+            }
+            
+            // 切换内容区域
+            function showStep(stepNumber) {
+                document.querySelectorAll('.content-section').forEach(section => {
+                    section.classList.remove('active');
+                });
+                document.getElementById(`step${stepNumber}`).classList.add('active');
+                updateStepIndicator(stepNumber);
+            }
+            
+            // 第一步：输入内容 → 第二步：标注内容
+            document.getElementById('next-to-step2').addEventListener('click', function() {
+                const inputText = document.getElementById('text-input').value;
+                if (inputText.trim() === '') {
+                    alert('请输入内容');
+                    return;
+                }
+                
+                // 获取并存储标题
+                const titleInput = document.getElementById('title-input').value.trim();
+                documentTitle = titleInput || "阅读笔记";
+                
+                // 清空之前的数据
+                paragraphsData = [];
+                allExplanations = [];
+                
+                // 渲染文本
+                const paragraphs = inputText.split('\n').filter(p => p.trim() !== '');
+                const renderedText = document.getElementById('rendered-text');
+                renderedText.innerHTML = '';
+                
+                paragraphs.forEach((para, index) => {
+                    const paraContainer = document.createElement('div');
+                    paraContainer.className = 'paragraph-container';
+                    
+                    const p = document.createElement('div');
+                    p.dataset.paraIndex = index;
+                    try {
+                        // 使用marked解析Markdown
+                        p.innerHTML = marked.parse(para);
+                    } catch (e) {
+                        console.error('Markdown解析错误:', e);
+                        p.textContent = para; // 回退到纯文本
+                    }
+                    paraContainer.appendChild(p);
+                    
+                    renderedText.appendChild(paraContainer);
+                    
+                    // 初始化段落数据
+                    paragraphsData.push({
+                        text: para,
+                        annotations: []
+                    });
+                });
+                
+                showStep(2);
+            });
+            
+            // 第二步：标注内容 → 第一步：输入内容
+            document.getElementById('back-to-step1').addEventListener('click', function() {
+                showStep(1);
+            });
+            
+            // 监听文本选择变化
+            document.addEventListener('selectionchange', function() {
+                const selection = window.getSelection();
+                const selectedText = selection.toString().trim();
+                const hintElement = document.getElementById('selection-hint');
+                
+                if (selectedText.length > 0 && selection.rangeCount > 0) {
+                    const range = selection.getRangeAt(0);
+                    const paragraph = range.startContainer.parentElement.closest('[data-para-index]');
+                    
+                    if (paragraph && paragraph.dataset.paraIndex) {
+                        currentSelection = {
+                            text: selectedText,
+                            range: range,
+                            paraIndex: parseInt(paragraph.dataset.paraIndex),
+                            startOffset: range.startOffset,
+                            endOffset: range.endOffset
+                        };
+                        
+                        document.getElementById('annotate-btn').style.display = 'inline-block';
+                        hintElement.textContent = `已选中: "${selectedText}"`;
+                    }
+                } else {
+                    currentSelection = null;
+                    document.getElementById('annotate-btn').style.display = 'none';
+                    hintElement.textContent = '';
+                }
+            });
+            
+            // 标注选中内容
+            document.getElementById('annotate-btn').addEventListener('click', function() {
+                if (!currentSelection) return;
+                
+                const { text, range, paraIndex } = currentSelection;
+                
+                // 检查是否已经标注过
+                const alreadyAnnotated = paragraphsData[paraIndex].annotations.some(
+                    ann => ann.text === text && ann.startOffset === range.startOffset
+                );
+                
+                if (alreadyAnnotated) {
+                    alert('这个内容已经标注过了');
+                    return;
+                }
+                
+                const span = document.createElement('span');
+                span.className = 'annotated';
+                span.textContent = text;
+                span.dataset.paraIndex = paraIndex;
+                span.dataset.startOffset = range.startOffset;
+                
+                // 添加取消标注按钮
+                const removeBtn = document.createElement('button');
+                removeBtn.className = 'remove-annotation';
+                removeBtn.innerHTML = '×';
+                removeBtn.onclick = function(e) {
+                    e.stopPropagation();
+                    removeAnnotation(span, paraIndex, text, range.startOffset);
+                };
+                span.appendChild(removeBtn);
+                
+                range.deleteContents();
+                range.insertNode(span);
+                
+                // 记录标注
+                paragraphsData[paraIndex].annotations.push({
+                    text: text,
+                    startOffset: range.startOffset
+                });
+                
+                // 清除选择
+                window.getSelection().removeAllRanges();
+                document.getElementById('annotate-btn').style.display = 'none';
+                document.getElementById('selection-hint').textContent = `已标注: "${text}"`;
+                
+                currentSelection = null;
+            });
+            
+            // 取消标注函数
+            function removeAnnotation(element, paraIndex, text, startOffset) {
+                // 从DOM中移除
+                const textNode = document.createTextNode(text);
+                element.parentNode.replaceChild(textNode, element);
+                
+                // 从数据中移除
+                paragraphsData[paraIndex].annotations = paragraphsData[paraIndex].annotations.filter(
+                    ann => !(ann.text === text && ann.startOffset === startOffset)
+                );
+            }
+            
+            // 双击标注单词或短语
+            document.getElementById('rendered-text').addEventListener('dblclick', function(e) {
+                const selection = window.getSelection();
+                if (selection.toString().trim() === '') return;
+                
+                const range = selection.getRangeAt(0);
+                const selectedText = selection.toString();
+                const paragraph = range.startContainer.parentElement.closest('[data-para-index]');
+                
+                if (!paragraph || !paragraph.dataset.paraIndex) return;
+                
+                const paraIndex = parseInt(paragraph.dataset.paraIndex);
+                
+                // 检查是否已经标注过
+                const alreadyAnnotated = paragraphsData[paraIndex].annotations.some(
+                    ann => ann.text === selectedText && ann.startOffset === range.startOffset
+                );
+                
+                if (alreadyAnnotated) {
+                    alert('这个内容已经标注过了');
+                    return;
+                }
+                
+                const span = document.createElement('span');
+                span.className = 'annotated';
+                span.textContent = selectedText;
+                span.dataset.paraIndex = paraIndex;
+                span.dataset.startOffset = range.startOffset;
+                
+                // 添加取消标注按钮
+                const removeBtn = document.createElement('button');
+                removeBtn.className = 'remove-annotation';
+                removeBtn.innerHTML = '×';
+                removeBtn.onclick = function(e) {
+                    e.stopPropagation();
+                    removeAnnotation(span, paraIndex, selectedText, range.startOffset);
+                };
+                span.appendChild(removeBtn);
+                
+                range.deleteContents();
+                range.insertNode(span);
+                
+                // 记录标注
+                paragraphsData[paraIndex].annotations.push({
+                    text: selectedText,
+                    startOffset: range.startOffset
+                });
+                
+                selection.removeAllRanges();
+                
+                // 显示标注反馈
+                document.getElementById('selection-hint').textContent = `已标注: "${selectedText}"`;
+            });
+            
+            // 第二步：标注内容 → 第三步：查看解释
+            document.getElementById('next-to-step3').addEventListener('click', async function() {
+                const contentDiv = document.getElementById('content-with-explanations');
+                contentDiv.innerHTML = '';
+                
+                // 设置PDF标题
+                document.getElementById('pdf-title').textContent = documentTitle;
+                
+                const statusElement = document.getElementById('api-status');
+                statusElement.style.display = 'none';
+                
+                let hasAnnotations = false;
+                allExplanations = [];
+                
+                // 收集所有标注
+                const allAnnotations = [];
+                paragraphsData.forEach((paraData, paraIndex) => {
+                    if (paraData.annotations.length === 0) return;
+                    
+                    hasAnnotations = true;
+                    paraData.annotations.forEach(annotation => {
+                        allAnnotations.push({
+                            text: annotation.text,
+                            paraIndex: paraIndex,
+                            startOffset: annotation.startOffset
+                        });
+                    });
+                });
+                
+                if (!hasAnnotations) {
+                    alert('您还没有标注任何内容，请返回上一步进行标注');
+                    return;
+                }
+                
+                // 禁用按钮并显示加载屏幕
+                document.getElementById('next-to-step3').disabled = true;
+                const loadingScreen = document.getElementById('loading-screen');
+                const progressBar = document.getElementById('api-progress-bar');
+                const loadingMessage = document.getElementById('loading-message');
+                loadingScreen.style.display = 'flex';
+                
+                try {
+                    // 批量获取解释
+                    for (let i = 0; i < allAnnotations.length; i++) {
+                        const annotation = allAnnotations[i];
+                        
+                        // 更新进度
+                        const progress = Math.round((i / allAnnotations.length) * 100);
+                        progressBar.style.width = `${progress}%`;
+                        progressBar.textContent = `${progress}%`;
+                        loadingMessage.textContent = `正在获取解释 (${i+1}/${allAnnotations.length}): "${annotation.text}"`;
+                        
+                        try {
+                            // 调用DeepSeek API
+                            const explanation = await getDeepSeekExplanation(annotation.text);
+                            
+                            // 存储解释结果
+                            allExplanations.push({
+                                text: annotation.text,
+                                explanation: explanation,
+                                paraIndex: annotation.paraIndex,
+                                startOffset: annotation.startOffset
+                            });
+                            
+                            // 显示成功状态
+                            showApiStatus(`成功获取 "${annotation.text}" 的解释`, 'success');
+                        } catch (error) {
+                            console.error('获取解释失败:', error);
+                            
+                            // 存储错误信息
+                            allExplanations.push({
+                                text: annotation.text,
+                                explanation: `获取解释失败: ${error.message}`,
+                                paraIndex: annotation.paraIndex,
+                                startOffset: annotation.startOffset
+                            });
+                            
+                            // 显示错误状态
+                            showApiStatus(`获取 "${annotation.text}" 解释失败: ${error.message}`, 'error');
+                        }
+                    }
+                    
+                    // 完成所有请求后渲染结果
+                    renderExplanations();
+                    
+                } catch (error) {
+                    console.error('批量获取解释出错:', error);
+                    showApiStatus(`批量获取解释出错: ${error.message}`, 'error');
+                } finally {
+                    // 隐藏加载屏幕并启用按钮
+                    loadingScreen.style.display = 'none';
+                    document.getElementById('next-to-step3').disabled = false;
+                    showStep(3);
+                }
+            });
+            
+            // 渲染所有解释
+            function renderExplanations() {
+                const contentDiv = document.getElementById('content-with-explanations');
+                contentDiv.innerHTML = '';
+                
+                // 设置PDF生成日期
+                document.getElementById('pdf-date').textContent = new Date().toLocaleString();
+                
+                // 按段落分组解释
+                const explanationsByPara = {};
+                allExplanations.forEach(item => {
+                    if (!explanationsByPara[item.paraIndex]) {
+                        explanationsByPara[item.paraIndex] = [];
+                    }
+                    explanationsByPara[item.paraIndex].push(item);
+                });
+                
+                // 渲染每个段落及其解释
+                Object.keys(explanationsByPara).forEach(paraIndex => {
+                    const paraData = paragraphsData[paraIndex];
+                    const explanations = explanationsByPara[paraIndex];
+                    
+                    const paraContainer = document.createElement('div');
+                    paraContainer.className = 'paragraph-container';
+                    
+                    // 显示段落原文（带高亮标注）
+                    const paraElement = document.createElement('div');
+                    paraElement.innerHTML = highlightAnnotations(paraData.text, explanations, paraIndex);
+                    paraContainer.appendChild(paraElement);
+                    
+                    // 创建解释区域
+                    const explanationsDiv = document.createElement('div');
+                    explanationsDiv.className = 'paragraph-explanations markdown-content';
+                    
+                    const explanationsTitle = document.createElement('h4');
+                    explanationsTitle.textContent = `段落 ${parseInt(paraIndex) + 1} 的标注解释:`;
+                    explanationsDiv.appendChild(explanationsTitle);
+                    
+                    // 为每个标注添加解释
+                    explanations.forEach(item => {
+                        const explanationItem = document.createElement('div');
+                        explanationItem.className = 'explanation-item';
+                        
+                        // 创建可点击的标题
+                        const header = document.createElement('div');
+                        header.className = 'explanation-header';
+                        header.innerHTML = `<span>${item.text}</span> <span>▼</span>`;
+                        
+                        // 创建可展开的内容
+                        const content = document.createElement('div');
+                        content.className = 'explanation-content';
+                        // 解析Markdown内容
+                        content.innerHTML = marked.parse(item.explanation);
+                        
+                        // 点击标题展开/收起内容
+                        header.addEventListener('click', function() {
+                            content.classList.toggle('show');
+                            header.querySelector('span:last-child').textContent =
+                                content.classList.contains('show') ? '▲' : '▼';
+                        });
+                        
+                        explanationItem.appendChild(header);
+                        explanationItem.appendChild(content);
+                        explanationsDiv.appendChild(explanationItem);
+                    });
+                    
+                    paraContainer.appendChild(explanationsDiv);
+                    contentDiv.appendChild(paraContainer);
+                });
+            }
+            
+            // 高亮原文中的标注
+            function highlightAnnotations(text, annotations, paraIndex) {
+                let html = marked.parse(text);
+                
+                // 按偏移量降序排序，这样替换时不会影响其他标注的位置
+                const sortedAnnotations = [...annotations].sort((a, b) => b.startOffset - a.startOffset);
+                
+                sortedAnnotations.forEach(ann => {
+                    // 在HTML中找到对应位置进行高亮
+                    const escapedText = ann.text.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+                    const regex = new RegExp(`(${escapedText})(?![^<]*>|[^<>]*<\/)`);
+                    html = html.replace(regex, `<span class="annotated">$1<button class="remove-annotation">×</button></span>`);
+                });
+                
+                return html;
+            }
+            
+            // 调用DeepSeek API获取解释（包含例句）
+            async function getDeepSeekExplanation(term) {
+                if (!DEEPSEEK_API_KEY || DEEPSEEK_API_KEY === 'YOUR_API_KEY_HERE') {
+                    throw new Error('请先配置DeepSeek API密钥');
+                }
 
-<div class="copyright">
-  
-  &copy; 2024 – 
-  <span itemprop="copyrightYear">2025</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">Stella</span>
-    <span class="post-meta-divider">|</span>
-    <span class="post-meta-item-icon">
-      <i class="fa fa-chart-area"></i>
-    </span>
-    <span title="Symbols count total">26k</span>
-    <span class="post-meta-divider">|</span>
-    <span class="post-meta-item-icon">
-      <i class="fa fa-coffee"></i>
-    </span>
-    <span title="Reading time total">19 mins.</span>
-</div>
-  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://mist.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Mist</a>
-  </div>
+                // 改进的prompt，明确要求提供例句
+                const prompt = `请用中文解释以下英语词汇/短语，要求包含：
+1. 简明中英文定义
+2. 词性（如名词、动词等）
+3. 2个典型英语例句（带中文翻译）
+4. 常见搭配（如适用）
+请解释："${term}"`;
 
-        
-<div class="busuanzi-count">
-  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-user"></i>
-      </span>
-      <span class="site-uv" title="Total Visitors">
-        <span id="busuanzi_value_site_uv"></span>
-      </span>
-    </span>
-    <span class="post-meta-divider">|</span>
-    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-eye"></i>
-      </span>
-      <span class="site-pv" title="Total Views">
-        <span id="busuanzi_value_site_pv"></span>
-      </span>
-    </span>
-</div>
+                const response = await fetch(DEEPSEEK_API_URL, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': `Bearer ${DEEPSEEK_API_KEY}`
+                    },
+                    body: JSON.stringify({
+                        model: "deepseek-chat",
+                        messages: [
+                            {
+                                role: "user",
+                                content: prompt
+                            }
+                        ],
+                        temperature: 0.7,
+                        max_tokens: 500  // 增加token限制以容纳例句
+                    })
+                });
 
+                if (!response.ok) {
+                    throw new Error(`API请求失败: ${response.status}`);
+                }
 
+                const data = await response.json();
+                
+                if (data.choices && data.choices[0] && data.choices[0].message) {
+                    return formatExplanation(data.choices[0].message.content);
+                } else {
+                    throw new Error('无法解析API响应');
+                }
+            }
 
+            // 格式化解释内容
+            function formatExplanation(rawExplanation) {
+                // 将原始解释中的例句用Markdown格式突出显示
+                let formatted = rawExplanation;
+                
+                // 匹配英语例句并添加格式
+                formatted = formatted.replace(/(例句1?:.*?)([A-Z].*?)(中文翻译:)/gs, '$1\n\n**`$2`**\n\n$3');
+                formatted = formatted.replace(/(例句2?:.*?)([A-Z].*?)(中文翻译:)/gs, '$1\n\n**`$2`**\n\n$3');
+                
+                return formatted;
+            }
+            
+            // 显示API状态信息
+            function showApiStatus(message, type = 'success') {
+                const statusElement = document.getElementById('api-status');
+                statusElement.textContent = message;
+                statusElement.className = `api-status ${type}`;
+                statusElement.style.display = 'block';
+                
+                // 3秒后自动隐藏
+                setTimeout(() => {
+                    statusElement.style.display = 'none';
+                }, 3000);
+            }
+            
+            // 第三步：查看解释 → 第二步：标注内容
+            document.getElementById('back-to-step2').addEventListener('click', function() {
+                showStep(2);
+            });
 
+            // PDF生成函数
+            // 替换原来的PDF生成函数
+           document.getElementById('download-btn').addEventListener('click', async function() {
+                const statusElement = document.getElementById('api-status');
+                statusElement.textContent = "正在生成PDF...";
+                statusElement.className = "api-status success";
+                statusElement.style.display = "block";
+                
+                try {
+                    // 使用html2canvas和jsPDF组合方案
+                    const { jsPDF } = window.jspdf;
+                    
+                    // 1. 获取要转换的元素
+                    const element = document.getElementById('pdf-preview');
+                    
+                    // 2. 使用html2canvas将HTML转为Canvas
+                    const canvas = await html2canvas(element, {
+                        scale: 2, // 提高分辨率
+                        logging: false,
+                        useCORS: true, // 允许跨域资源
+                        allowTaint: true,
+                        scrollY: -window.scrollY // 避免滚动条影响
+                    });
+                    
+                    // 3. 计算PDF尺寸
+                    const imgData = canvas.toDataURL('image/png');
+                    const imgWidth = 210; // A4宽度(mm)
+                    const pageHeight = 297; // A4高度(mm)
+                    const imgHeight = canvas.height * imgWidth / canvas.width;
+                    
+                    // 4. 创建PDF
+                    const pdf = new jsPDF('p', 'mm', 'a4');
+                    let heightLeft = imgHeight;
+                    let position = 0;
+                    
+                    // 5. 添加图片到PDF(自动分页)
+                    pdf.addImage(imgData, 'PNG', 0, position, imgWidth, imgHeight);
+                    heightLeft -= pageHeight;
+                    
+                    while (heightLeft >= 0) {
+                        position = heightLeft - imgHeight;
+                        pdf.addPage();
+                        pdf.addImage(imgData, 'PNG', 0, position, imgWidth, imgHeight);
+                        heightLeft -= pageHeight;
+                    }
+                    
+                    // 6. 保存PDF
+                    pdf.save(`${documentTitle}.pdf`);
+                    
+                    showApiStatus("PDF生成成功", 'success');
+                } catch (error) {
+                    console.error('生成PDF失败:', error);
+                    showApiStatus(`生成PDF失败: ${error.message}`, 'error');
+                }
+            });
+            
+            // 初始化
+            updateStepIndicator(1);
+        }
 
-
-
-
-      </div>
-    </footer>
-  </div>
-
-  
-  <script src="/lib/anime.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/medium-zoom@1/dist/medium-zoom.min.js"></script>
-  <script src="/lib/velocity/velocity.min.js"></script>
-  <script src="/lib/velocity/velocity.ui.min.js"></script>
-
-<script src="/js/utils.js"></script>
-
-<script src="/js/motion.js"></script>
-
-
-<script src="/js/schemes/muse.js"></script>
-
-
-<script src="/js/next-boot.js"></script>
-
-
-
-
-  
-
-
-
-
-  
-<script src="/js/local-search.js"></script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-  
-
-
-<script>
-NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
-  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
-    var GUEST = ['nick', 'mail', 'link'];
-    var guest = 'nick,mail,link';
-    guest = guest.split(',').filter(item => {
-      return GUEST.includes(item);
-    });
-    new Valine({
-      el         : '#valine-comments',
-      verify     : false,
-      notify     : false,
-      appId      : '5UztKHQNFxpHig1y6SkY2e2s-gzGzoHsz',
-      appKey     : 'PRBmhB6A8PDg2Zc7ZgGsC7nV',
-      placeholder: "Leave your comment here. Nick is a must.\n输入你的评论，昵称为必填项目。",
-      avatar     : '',
-      meta       : guest,
-      pageSize   : '10' || 10,
-      visitor    : false,
-      lang       : 'en, zh-CN' || 'zh-cn',
-      path       : location.pathname,
-      recordIP   : true,
-      serverURLs : ''
-    });
-  }, window.Valine);
-});
-</script>
-
+        // 页面加载完成后初始化应用
+        document.addEventListener('DOMContentLoaded', function() {
+            // 先检查marked是否已加载
+            if (checkMarkedLoaded()) {
+                initApp();
+            }
+        });
+    </script>
 </body>
 </html>
